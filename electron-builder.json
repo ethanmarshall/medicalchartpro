@@ -1,0 +1,37 @@
+{
+  "appId": "com.medchart.pro",
+  "productName": "MedChart Pro",
+  "directories": {
+    "output": "dist-electron"
+  },
+  "files": [
+    "dist/**/*",
+    "electron-main.js",
+    "electron-preload.js",
+    "package.json",
+    "node_modules/**/*"
+  ],
+  "mac": {
+    "target": {
+      "target": "dir",
+      "arch": ["arm64"]
+    },
+    "category": "public.app-category.medical",
+    "identity": null,
+    "entitlements": null,
+    "entitlementsInherit": null,
+    "gatekeeperAssess": false,
+    "hardenedRuntime": false
+  },
+  "win": {
+    "target": "nsis"
+  },
+  "linux": {
+    "target": "AppImage",
+    "category": "Office"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true
+  }
+}

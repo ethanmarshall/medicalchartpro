@@ -1,0 +1,56 @@
+Last login: Sun Sep  7 14:20:46 on console
+ethanmarshall@Ethans-MacBook-Pro ~ % cd Desktop/medchartpro
+ethanmarshall@Ethans-MacBook-Pro medchartpro % npm install
+npm warn deprecated @esbuild-kit/esm-loader@2.6.5: Merged into tsx: https://tsx.is
+npm warn deprecated @esbuild-kit/core-utils@3.3.2: Merged into tsx: https://tsx.is
+
+added 597 packages, and audited 598 packages in 5s
+
+79 packages are looking for funding
+  run `npm fund` for details
+
+10 vulnerabilities (1 low, 8 moderate, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+ethanmarshall@Ethans-MacBook-Pro medchartpro % npm run dist
+
+> rest-express@1.0.0 dist
+> npm run build && electron-builder
+
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+vite v5.4.19 building for production...
+transforming (2) ../vite/modulepreload-polyfill.jsBrowserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 3004 modules transformed.
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) /Users/ethanmarshall/Desktop/medchartpro/client/src/lib/queryClient.ts is dynamically imported by /Users/ethanmarshall/Desktop/medchartpro/client/src/components/vital-sim.tsx but also statically imported by /Users/ethanmarshall/Desktop/medchartpro/client/src/App.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/admin-dashboard.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/care-notes.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/double-confirmation-medication-admin.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/enhanced-vitals.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/lab-order.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/lab-results.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/login.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/patient-chart.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/patient-form.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/prescription-manager.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/time-simulation.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/components/user-management.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/pages/dashboard.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/pages/home.tsx, /Users/ethanmarshall/Desktop/medchartpro/client/src/pages/medpyxis.tsx, dynamic import will not move module into another chunk.
+
+../dist/public/index.html                                       2.20 kB │ gzip:   0.86 kB
+../dist/public/assets/IMG_1772_1756955496751-C07JcabP.jpeg      4.81 kB
+../dist/public/assets/index-BLWiIetG.css                      101.84 kB │ gzip:  16.64 kB
+../dist/public/assets/index-CEW3jMxe.js                     1,214.09 kB │ gzip: 303.62 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.87s
+
+  dist/index.js  167.6kb
+
+⚡ Done in 13ms
+sh: electron-builder: command not found
+ethanmarshall@Ethans-MacBook-Pro medchartpro %     

@@ -1,0 +1,52 @@
+
+ethanmarshall@Ethans-MacBook-Pro MedChartProv2 % npm run dist
+
+> rest-express@1.0.0 dist
+> npm run build && electron-builder
+
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+vite v5.4.19 building for production...
+transforming (2) ../vite/modulepreload-polyfill.jsBrowserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 3002 modules transformed.
+../dist/public/index.html                                       2.20 kB │ gzip:   0.86 kB
+../dist/public/assets/IMG_1772_1756955496751-C07JcabP.jpeg      4.81 kB
+../dist/public/assets/index-C1JENidU.css                      101.96 kB │ gzip:  16.63 kB
+../dist/public/assets/index-B6JGxmao.js                     1,161.45 kB │ gzip: 294.48 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.86s
+
+  dist/index.js  156.0kb
+
+⚡ Done in 11ms
+  • electron-builder  version=26.0.12 os=24.1.0
+  • loaded configuration  file=/Users/ethanmarshall/Desktop/MedChartProv2/electron-builder.json
+  • description is missed in the package.json  appPackageFile=/Users/ethanmarshall/Desktop/MedChartProv2/package.json
+  • author is missed in the package.json  appPackageFile=/Users/ethanmarshall/Desktop/MedChartProv2/package.json
+  • writing effective config  file=dist-electron/builder-effective-config.yaml
+  • executing @electron/rebuild  electronVersion=32.1.2 arch=arm64 buildFromSource=false appDir=./
+  • installing native dependencies  arch=arm64
+  • preparing       moduleName=better-sqlite3 arch=arm64
+  • finished        moduleName=better-sqlite3 arch=arm64
+  • preparing       moduleName=bufferutil arch=arm64
+  • finished        moduleName=bufferutil arch=arm64
+  • completed installing native dependencies
+  • packaging       platform=darwin arch=arm64 electron=32.1.2 appOutDir=dist-electron/mac-arm64
+  • downloading     url=https://github.com/electron/electron/releases/download/v32.1.2/electron-v32.1.2-darwin-arm64.zip size=99 MB parts=8
+  • downloaded      url=https://github.com/electron/electron/releases/download/v32.1.2/electron-v32.1.2-darwin-arm64.zip duration=6.416s
+  • default Electron icon is used  reason=application icon is not set
+  • skipped macOS application code signing  reason=cannot find valid "Developer ID Application" identity or custom non-Apple code signing certificate, it could cause some undefined behaviour, e.g. macOS localized description not visible, see https://electron.build/code-signing allIdentities=  1) B8C8D383DA9316139B9E453F922B901E56231888 "Apple Development: ethanmarshall22@gmail.com (6XM5F8T2KA)" (CSSMERR_TP_CERT_EXPIRED)
+     1 identities found
+                                                Valid identities only
+     0 valid identities found
+  • building        target=DMG arch=arm64 file=dist-electron/MedChart Pro-1.0.0-arm64.dmg
+  • building block map  blockMapFile=dist-electron/MedChart Pro-1.0.0-arm64.dmg.blockmap
+ethanmarshall@Ethans-MacBook-Pro MedChartProv2 % 

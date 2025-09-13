@@ -1,0 +1,652 @@
+[
+  {
+    "id": "10000001",
+    "name": "Acetaminophen",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "650mg",
+    "category": "pain-killer",
+    "classification": "Non-opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000002",
+    "name": "Acetaminophen",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "1000mg PO Every 6 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Non-opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000003",
+    "name": "Acetaminophen",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "1000mg IV Every 6 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Non-opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000004",
+    "name": "Ibuprofen/Motrin",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "600mg PO Every 6 hrs PRN",
+    "category": "pain-killer",
+    "classification": "NSAID",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000005",
+    "name": "Toradol",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "30mg IVP Every 6 hrs PRN",
+    "category": "pain-killer",
+    "classification": "NSAID",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000006",
+    "name": "Oxycodone/Percocet",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "5mg PO Every 4-6 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000007",
+    "name": "Oxycodone/Percocet",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "10mg PO Every 4-6 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000008",
+    "name": "Morphine",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "2mg IVP Every 2-4 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000009",
+    "name": "Morphine",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "4mg IVP Every 2-4 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000010",
+    "name": "Fentanyl",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "50mcg IVP Every 2 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000011",
+    "name": "Fentanyl",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "100mcg IVP Every 2 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Analgesic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000012",
+    "name": "Nubain",
+    "drawer": "B1",
+    "bin": "01",
+    "dosage": "10mg IVP Every 4 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Agonist-Antagonist",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000013",
+    "name": "Nubain",
+    "drawer": "B1",
+    "bin": "02",
+    "dosage": "10mg IM Every 4 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Agonist-Antagonist",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000014",
+    "name": "Stadol",
+    "drawer": "B1",
+    "bin": "02",
+    "dosage": "1mg IVP Every 4 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Agonist-Antagonist",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000015",
+    "name": "Stadol",
+    "drawer": "B1",
+    "bin": "02",
+    "dosage": "2mg IVP Every 4 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Agonist-Antagonist",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000016",
+    "name": "Stadol",
+    "drawer": "B1",
+    "bin": "02",
+    "dosage": "1mg IM Every 4 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Agonist-Antagonist",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000017",
+    "name": "Stadol",
+    "drawer": "B1",
+    "bin": "02",
+    "dosage": "2mg IM Every 4 hrs PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Agonist-Antagonist",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000018",
+    "name": "Colace/Docusate sodium",
+    "drawer": "A1",
+    "bin": "02",
+    "dosage": "100mg PO BID",
+    "category": "general",
+    "classification": "Stool Softener",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000019",
+    "name": "Dulcolax",
+    "drawer": "A1",
+    "bin": "02",
+    "dosage": "10mg PO daily PRN",
+    "category": "general",
+    "classification": "Stimulant Laxative",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000020",
+    "name": "Senokot",
+    "drawer": "A1",
+    "bin": "02",
+    "dosage": "8.6mg PO BID PRN",
+    "category": "general",
+    "classification": "Stimulant Laxative",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000021",
+    "name": "Mylicon",
+    "drawer": "A1",
+    "bin": "02",
+    "dosage": "40mg PO Every 4 hrs PRN",
+    "category": "general",
+    "classification": "Antiflatulent",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000022",
+    "name": "Pitocin",
+    "drawer": "A1",
+    "bin": "02",
+    "dosage": "10 units/1000mL IV infusion",
+    "category": "general",
+    "classification": "Uterotonic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000023",
+    "name": "Methergine",
+    "drawer": "A1",
+    "bin": "02",
+    "dosage": "0.2mg PO Every 8 hrs",
+    "category": "general",
+    "classification": "Uterotonic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000024",
+    "name": "Methergine",
+    "drawer": "A1",
+    "bin": "02",
+    "dosage": "0.2mg IM Every 2-4 hrs PRN",
+    "category": "general",
+    "classification": "Uterotonic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000025",
+    "name": "Hemabate",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "250mcg IM Every 15-90 min PRN",
+    "category": "general",
+    "classification": "Uterotonic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000026",
+    "name": "Cytotec",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "400mcg PO Every 4 hrs",
+    "category": "general",
+    "classification": "Uterotonic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000027",
+    "name": "Cytotec",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "400mcg PR Every 4 hrs",
+    "category": "general",
+    "classification": "Uterotonic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000028",
+    "name": "Cervidil",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "10mg Vaginal insert Every 12 hrs",
+    "category": "general",
+    "classification": "Prostaglandin (Ripening)",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000029",
+    "name": "Prepidil gel",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "0.5mg Intracervical Every 6 hrs",
+    "category": "general",
+    "classification": "Prostaglandin (Ripening)",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000030",
+    "name": "Terbutaline",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "0.25mg SC Every 20 min x3",
+    "category": "general",
+    "classification": "Tocolytic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000031",
+    "name": "Labetalol",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "20mg IVP initial",
+    "category": "general",
+    "classification": "Antihypertensive",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000032",
+    "name": "Labetalol",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "200mg PO twice dialy",
+    "category": "general",
+    "classification": "Antihypertensive",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000033",
+    "name": "Labetalol",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "40-80mg IVP Every 10 mins",
+    "category": "general",
+    "classification": "Antihypertensive",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000034",
+    "name": "Nifedipine",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "10mg PO Every 20 min x3",
+    "category": "general",
+    "classification": "Antihypertensive",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000035",
+    "name": "Nifedipine",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "20mg PO Every 4-6 hrs",
+    "category": "general",
+    "classification": "Antihypertensive",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000036",
+    "name": "Aldomet",
+    "drawer": "A1",
+    "bin": "03",
+    "dosage": "250mg PO Every 6 hrs",
+    "category": "general",
+    "classification": "Antihypertensive",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000037",
+    "name": "Magnesium sulfate",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "4g IV Loading dose/Bolus dose",
+    "category": "general",
+    "classification": "Anticonvulsant/Neuroprotection",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000038",
+    "name": "Magnesium sulfate",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "2g/hr IV ",
+    "category": "general",
+    "classification": "Anticonvulsant/Neuroprotection",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000039",
+    "name": "Ephedrine",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "5mg IV PRN",
+    "category": "general",
+    "classification": "Vasopressor",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000040",
+    "name": "Ephedrine",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "10mg IV PRN",
+    "category": "general",
+    "classification": "Vasopressor",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000041",
+    "name": "Tdap vaccine",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "0.5mL IM Once",
+    "category": "general",
+    "classification": "Vaccine",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000042",
+    "name": "Flu vaccine",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "0.5mL IM Annually",
+    "category": "general",
+    "classification": "Vaccine",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000043",
+    "name": "Rhogam",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "300mcg IM",
+    "category": "general",
+    "classification": "Immunoglobulin",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000044",
+    "name": "Rubella vaccine",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "0.5mL SC postpartum",
+    "category": "general",
+    "classification": "Vaccine",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000045",
+    "name": "Energix/Hepatitis B vaccine",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "1mL IM x3",
+    "category": "general",
+    "classification": "Vaccine",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000046",
+    "name": "Hepatitis B vaccine newborn",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "0.5mL IM",
+    "category": "general",
+    "classification": "Vaccine",
+    "maternalOrNewborn": "Newborn"
+  },
+  {
+    "id": "10000047",
+    "name": "Ferrous sulfate",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "325mg PO daily",
+    "category": "general",
+    "classification": "Supplement",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000048",
+    "name": "Prenatal vitamin",
+    "drawer": "A1",
+    "bin": "04",
+    "dosage": "1 tablet PO daily",
+    "category": "general",
+    "classification": "Supplement",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000049",
+    "name": "Aqua-mephyton (Vitamin K)",
+    "drawer": "A1",
+    "bin": "05",
+    "dosage": "1mg IM newborn",
+    "category": "general",
+    "classification": "Newborn Prophylaxis",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000050",
+    "name": "Narcan",
+    "drawer": "B1",
+    "bin": "05",
+    "dosage": "0.4mg IVP PRN",
+    "category": "pain-killer",
+    "classification": "Opioid Antagonist",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000051",
+    "name": "Calcium gluconate",
+    "drawer": "A1",
+    "bin": "05",
+    "dosage": "1g IV over 10min",
+    "category": "general",
+    "classification": "Mg Antidote",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000052",
+    "name": "Betamethasone",
+    "drawer": "A1",
+    "bin": "05",
+    "dosage": "12mg IM Every 24 hrs x2",
+    "category": "general",
+    "classification": "Corticosteroid",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000053",
+    "name": "Erythromycin ointment",
+    "drawer": "A1",
+    "bin": "05",
+    "dosage": "Both eyes Topical Once",
+    "category": "general",
+    "classification": "Newborn Prophylaxis",
+    "maternalOrNewborn": "Newborn"
+  },
+  {
+    "id": "10000054",
+    "name": "Indocin",
+    "drawer": "A1",
+    "bin": "05",
+    "dosage": "50mg PO Every 6 hrs x8",
+    "category": "general",
+    "classification": "NSAID Tocolytic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000055",
+    "name": "Methadone",
+    "drawer": "B1",
+    "bin": "05",
+    "dosage": "Individualized",
+    "category": "pain-killer",
+    "classification": "Opioid Maintenance",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000056",
+    "name": "Subutex/Buprenorphine",
+    "drawer": "B1",
+    "bin": "05",
+    "dosage": "Individualized",
+    "category": "pain-killer",
+    "classification": "Opioid Maintenance",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000057",
+    "name": "Suboxone",
+    "drawer": "B1",
+    "bin": "05",
+    "dosage": "Individualized",
+    "category": "pain-killer",
+    "classification": "Opioid Maintenance",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000058",
+    "name": "Tranexamic acid",
+    "drawer": "A1",
+    "bin": "05",
+    "dosage": "1g IV over 10min",
+    "category": "general",
+    "classification": "Antifibrinolytic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000059",
+    "name": "Dermoplast spray",
+    "drawer": "A1",
+    "bin": "05",
+    "dosage": "Standard dose Topical PRN",
+    "category": "general",
+    "classification": "Topical Anesthetic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000060",
+    "name": "Lidocaine",
+    "drawer": "A1",
+    "bin": "05",
+    "dosage": "1% Solution Local anesthesia",
+    "category": "general",
+    "classification": "Local Anesthetic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000061",
+    "name": "Lidocaine",
+    "drawer": "A1",
+    "bin": "06",
+    "dosage": "2% Solution Local anesthesia",
+    "category": "general",
+    "classification": "Local Anesthetic",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000062",
+    "name": "EMLA cream",
+    "drawer": "A1",
+    "bin": "06",
+    "dosage": "Topical 60min Pre-procedure",
+    "category": "general",
+    "classification": "Topical Anesthetic",
+    "maternalOrNewborn": "Newborn"
+  },
+  {
+    "id": "10000063",
+    "name": "Glucose Gel (sweet cheeks)",
+    "drawer": "A1",
+    "bin": "06",
+    "dosage": "Weight based: Buccal PRN low blood sugar PRN",
+    "category": "general",
+    "classification": "Glucose elevating Agent",
+    "maternalOrNewborn": "Newborn"
+  },
+  {
+    "id": "10000064",
+    "name": "Penicillin",
+    "drawer": "A1",
+    "bin": "06",
+    "dosage": "5 million units IV Once",
+    "category": "general",
+    "classification": "General",
+    "maternalOrNewborn": "Maternal"
+  },
+  {
+    "id": "10000065",
+    "name": "Ampicillin",
+    "drawer": "A1",
+    "bin": "06",
+    "dosage": "2gram loading dose IV Once",
+    "category": "general",
+    "classification": "General",
+    "maternalOrNewborn": "Maternal"
+  }
+]

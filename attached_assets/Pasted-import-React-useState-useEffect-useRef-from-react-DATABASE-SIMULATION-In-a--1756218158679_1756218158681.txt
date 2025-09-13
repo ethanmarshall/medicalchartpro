@@ -1,0 +1,319 @@
+import React, { useState, useEffect, useRef } from 'react';
+
+// --- DATABASE SIMULATION ---
+// In a real application, this data would be fetched from an API.
+const initialPatientsData = {
+    '112233445566': { id: '112233445566', name: 'Olivia Chen', dob: '1988-05-21', age: 37, doseWeight: '68 kg', sex: 'Female', mrn: 'MRN7384920', fin: 'FIN5839201', admitted: '2025-08-22', codeStatus: 'Full Code', isolation: 'None', chartData: { background: '<h3>Patient History</h3><p>Patient is a 37-year-old female with a history of hypertension and moderate persistent asthma, diagnosed 10 years ago. Well-managed on daily inhaled corticosteroids. No history of smoking. No known drug allergies.</p>', summary: '<h3>Admission Summary</h3><p>Admitted on 2025-08-22 for acute exacerbation of asthma, likely triggered by recent environmental allergens. Presented with shortness of breath, wheezing, and chest tightness. Currently stable on continuous nebulizer treatments and IV steroids.</p>', discharge: '<h3>Discharge Plan</h3><p>Plan for discharge in 2-3 days pending continued stability and successful wean from continuous nebulizers to PRN inhaler. Patient will need follow-up with PCP within 1 week of discharge. Education on inhaler technique and allergen avoidance to be reinforced.</p>', handoff: '<h3>SBAR Handoff</h3><p><strong>Situation:</strong> Olivia Chen is a 37 y/o female admitted for an asthma exacerbation, now stable.<br><strong>Background:</strong> History of HTN and asthma. No allergies.<br><strong>Assessment:</strong> Vitals stable, responding well to treatment, breath sounds improving.<br><strong>Recommendation:</strong> Continue current plan of care. Monitor for any signs of respiratory distress. Wean nebulizer treatments as tolerated.</p>' }},
+    '223344556677': { id: '223344556677', name: 'Benjamin Carter', dob: '1954-11-10', age: 70, doseWeight: '85 kg', sex: 'Male', mrn: 'MRN2947561', fin: 'FIN8472019', admitted: '2025-08-20', codeStatus: 'DNR/DNI', isolation: 'Contact Precautions (MRSA)', chartData: { background: '<h3>Patient History</h3><p>70-year-old male with a significant history of Type 2 Diabetes, coronary artery disease (s/p CABG x3 in 2018), and chronic kidney disease stage 3. History of MRSA colonization.</p>', summary: '<h3>Admission Summary</h3><p>Admitted for community-acquired pneumonia. Presented with fever, productive cough, and hypoxia. Started on broad-spectrum antibiotics. Showing slow but steady improvement.</p>', discharge: '<h3>Discharge Plan</h3><p>Requires at least 5 more days of IV antibiotics. Plan for transition to oral antibiotics once clinically stable. Physical therapy consult initiated for deconditioning.</p>', handoff: '<h3>SBAR Handoff</h3><p><strong>Situation:</strong> Benjamin Carter, 70 y/o male with pneumonia.<br><strong>Background:</strong> Complicated PMH including CAD, DM2, CKD. Contact isolation for MRSA.<br><strong>Assessment:</strong> Responding to antibiotics, afebrile, O2 sats improving on 2L NC.<br><strong>Recommendation:</strong> Continue antibiotics, monitor renal function, encourage mobility.</p>' }},
+};
+
+const medicinesData = {
+    '319084': { name: 'Acetaminophen' }, '369402': { name: 'Colace/Docusate Sodium' }, '6843902': { name: 'Dermoplast Spray' }, '0613444': { name: 'Dulcolax' }, '195673': { name: 'Energix/Hepatitis (for mom)' }, '95283134': { name: 'Ephedrine' }, '859672': { name: 'Fentanyl' }, '058756712': { name: 'Flu Vaccine' }, '3576934': { name: 'Ibuprofen/Motrin' }, '0138539841': { name: 'Lidocaine' }, '9846256642': { name: 'Mylicon' }, '245241524': { name: 'Nubaine' }, '5663264': { name: 'Oxycodone/Percocet' }, '24244555': { name: 'Prenatal Vitamin' }, '9999204': { name: 'Rhogam' }, '78264582': { name: 'Rubella Vaccine' }, '001238564': { name: 'Senekot' }, '9682953211': { name: 'Stadol' }, '1124663': { name: 'Tdap Vaccine/Adacel' }, '6032924': { name: 'Toradol' }, '77783643': { name: 'Aldomet' }, '124564': { name: 'Aquamephyton (vit K)' }, '494698428723': { name: 'Bethamethasone' }, '021859235': { name: 'Calcium Gluconate' }, '11345362890': { name: 'Cervidil' }, '3557483': { name: 'Cytotec' }, '09427453872': { name: 'Ephedrine' }, '435278888': { name: 'Erythromycin' }, '594583021111': { name: 'Emla Cream' }, '10010101': { name: 'Hepatitis B Vaccine (NB)' }, '5958202311': { name: 'Hemabate/Carboprost' }, '715434274': { name: 'Indocin/Indomethacin' }, '2094434849303': { name: 'Labetalol' }, '60708344': { name: 'Magnesium Sulfate' }, '42048579': { name: 'Methadone' }, '018562900': { name: 'Methergine' }, '09509828942': { name: 'Morphine' }, '91173527': { name: 'Narcan' }, '0000294824': { name: 'Pitocin' }, '20001948': { name: 'Prepidil Gel' }, '3008974523': { name: 'Subutex/Buprenorphine' }, '507890722': { name: 'Suboxone' }, '86730993': { name: 'Terbutaline' }, '10457302489835': { name: 'Tranexamic Acid' },
+};
+
+const prescriptionsData = {
+    '112233445566': ['3576934', '95283134', '6032924'], // Ibuprofen, Ephedrine, Toradol
+    '223344556677': ['09509828942', '319084', '2094434849303'], // Morphine, Acetaminophen, Labetalol
+};
+
+// --- HELPER FUNCTIONS ---
+const generateNewPatientId = (existingIds) => {
+    let newId;
+    do {
+        newId = Math.floor(100000000000 + Math.random() * 900000000000).toString();
+    } while (existingIds.includes(newId));
+    return newId;
+};
+
+// --- COMPONENTS ---
+
+const AddPatientForm = ({ onAddPatient, onCancel, existingPatientIds }) => {
+    const [formData, setFormData] = useState({
+        id: '', name: '', dob: '', age: '', doseWeight: '', sex: 'Female', mrn: '', fin: '', admitted: '', codeStatus: 'Full Code', isolation: 'None'
+    });
+
+    useEffect(() => {
+        setFormData(prev => ({ ...prev, id: generateNewPatientId(existingPatientIds) }));
+    }, [existingPatientIds]);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        const newPatient = {
+            ...formData,
+            age: parseInt(formData.age, 10) || 0,
+            chartData: { background: '', summary: '', discharge: '', handoff: '' }
+        };
+        onAddPatient(newPatient);
+    };
+
+    return (
+        <form onSubmit={handleSubmit} className="p-4 space-y-4">
+            <h2 className="text-xl font-bold text-gray-800 text-center">Register New Patient</h2>
+            <div className="bg-blue-50 p-3 rounded-lg text-center">
+                <p className="text-sm font-medium text-gray-600">Generated Patient ID (Barcode)</p>
+                <p className="text-lg font-mono font-bold text-blue-700">{formData.id}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input name="name" value={formData.name} onChange={handleChange} placeholder="Full Name" className="p-2 border rounded" required />
+                <input name="dob" value={formData.dob} onChange={handleChange} placeholder="Date of Birth (YYYY-MM-DD)" className="p-2 border rounded" required />
+                <input name="age" value={formData.age} onChange={handleChange} placeholder="Age" type="number" className="p-2 border rounded" required />
+                <input name="doseWeight" value={formData.doseWeight} onChange={handleChange} placeholder="Dose Weight (e.g., 70 kg)" className="p-2 border rounded" required />
+                <select name="sex" value={formData.sex} onChange={handleChange} className="p-2 border rounded bg-white">
+                    <option>Female</option>
+                    <option>Male</option>
+                    <option>Other</option>
+                </select>
+                <input name="mrn" value={formData.mrn} onChange={handleChange} placeholder="MRN" className="p-2 border rounded" required />
+                <input name="fin" value={formData.fin} onChange={handleChange} placeholder="FIN" className="p-2 border rounded" required />
+                <input name="admitted" value={formData.admitted} onChange={handleChange} placeholder="Admitted Date (YYYY-MM-DD)" className="p-2 border rounded" required />
+                 <select name="codeStatus" value={formData.codeStatus} onChange={handleChange} className="p-2 border rounded bg-white">
+                    <option>Full Code</option>
+                    <option>DNR/DNI</option>
+                </select>
+                 <select name="isolation" value={formData.isolation} onChange={handleChange} className="p-2 border rounded bg-white">
+                    <option>None</option>
+                    <option>Contact Precautions</option>
+                    <option>Droplet Precautions</option>
+                    <option>Airborne Precautions</option>
+                </select>
+            </div>
+            <div className="flex justify-center space-x-4 pt-4">
+                <button type="button" onClick={onCancel} className="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-6 rounded-lg transition">Cancel</button>
+                <button type="submit" className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-lg transition">Save Patient</button>
+            </div>
+        </form>
+    );
+};
+
+const ScannerView = ({ onScan, patients }) => {
+    const [patientId, setPatientId] = useState('');
+    const [error, setError] = useState('');
+    const inputRef = useRef(null);
+
+    useEffect(() => {
+        inputRef.current?.focus();
+    }, []);
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            const patient = patients[patientId.trim()];
+            if (patient) {
+                onScan(patient);
+                setError('');
+            } else {
+                setError('Patient ID not found. Please try again.');
+                inputRef.current?.select();
+            }
+        }
+    };
+
+    return (
+        <div className="p-4">
+            <h2 className="text-xl font-bold text-gray-800 text-center mb-4">Scan Patient Barcode</h2>
+            <div className="max-w-md mx-auto">
+                <input
+                    ref={inputRef} type="text" value={patientId}
+                    onChange={(e) => setPatientId(e.target.value)}
+                    onKeyPress={handleKeyPress}
+                    placeholder="Scan or Enter Patient ID..."
+                    className="w-full text-center p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150 text-lg"
+                />
+            </div>
+            {error && (
+                <div className="mt-4 text-center p-3 bg-red-100 text-red-700 rounded-lg max-w-md mx-auto">
+                    <p>{error}</p>
+                </div>
+            )}
+        </div>
+    );
+};
+
+const HomeView = ({ onScan, onAddPatient, patients }) => {
+    const [activeTab, setActiveTab] = useState('scan');
+
+    return (
+        <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 text-center">
+            <h1 className="text-3xl font-bold text-gray-900">Patient Chart System</h1>
+            <p className="text-gray-500 mt-2 mb-6">Scan an existing patient or register a new one.</p>
+            <div className="border-b border-gray-200 mb-4">
+                <nav className="-mb-px flex justify-center space-x-6">
+                    <a onClick={() => setActiveTab('scan')} className={`cursor-pointer whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm ${activeTab === 'scan' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
+                        Scan Patient
+                    </a>
+                    <a onClick={() => setActiveTab('add')} className={`cursor-pointer whitespace-nowrap py-3 px-4 border-b-2 font-medium text-sm ${activeTab === 'add' ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
+                        Add New Patient
+                    </a>
+                </nav>
+            </div>
+            {activeTab === 'scan' ? (
+                <ScannerView onScan={onScan} patients={patients} />
+            ) : (
+                <AddPatientForm 
+                    onAddPatient={onAddPatient} 
+                    onCancel={() => setActiveTab('scan')}
+                    existingPatientIds={Object.keys(patients)}
+                />
+            )}
+        </div>
+    );
+};
+
+const MedAdminTab = ({ patientId }) => {
+    const [verifiedMeds, setVerifiedMeds] = useState({});
+    const [log, setLog] = useState([]);
+    const medScannerRef = useRef(null);
+    const prescribedIds = prescriptionsData[patientId] || [];
+
+    useEffect(() => {
+        setVerifiedMeds({});
+        setLog([]);
+        medScannerRef.current?.focus();
+    }, [patientId]);
+
+    const addLogEntry = (message, type) => {
+        const timestamp = new Date().toLocaleTimeString();
+        setLog(prevLog => [...prevLog, { message, type, timestamp }]);
+    };
+
+    const handleMedKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            const medId = e.target.value.trim();
+            if (!medId) return;
+            const medicine = medicinesData[medId];
+            if (!medicine) {
+                addLogEntry(`ERROR: Scanned barcode ${medId} is not a known medicine.`, 'error');
+            } else if (!prescribedIds.includes(medId)) {
+                addLogEntry(`DANGER: Scanned medicine '${medicine.name}' is NOT prescribed for this patient.`, 'error');
+            } else if (verifiedMeds[medId]) {
+                addLogEntry(`WARNING: '${medicine.name}' has already been administered.`, 'warning');
+            } else {
+                setVerifiedMeds(prev => ({ ...prev, [medId]: new Date() }));
+                addLogEntry(`SUCCESS: Administered '${medicine.name}'.`, 'success');
+            }
+            e.target.value = '';
+        }
+    };
+
+    return (
+        <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 space-y-4">
+                <label htmlFor="medicine-scanner" className="block text-sm font-medium text-gray-700 mb-1">Scan Medicine Barcode</label>
+                <input
+                    ref={medScannerRef} type="text" id="medicine-scanner"
+                    placeholder="Scan or Enter Medicine ID..."
+                    onKeyPress={handleMedKeyPress}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-150"
+                />
+                <div className="pt-4 border-t">
+                    <h3 className="text-base font-semibold text-gray-800 mb-2">Verification Log</h3>
+                    <div className="h-32 overflow-y-auto bg-white border border-gray-200 rounded-md p-3 space-y-2 text-sm">
+                        {log.length === 0 ? <p className="text-gray-400 italic">Scan history will appear here...</p> : log.map((entry, index) => {
+                            const colorClasses = { success: 'text-green-600', warning: 'text-yellow-600', error: 'text-red-600 font-bold' };
+                            return <p key={index} className={colorClasses[entry.type]}><span className="font-mono text-xs">[{entry.timestamp}]</span> {entry.message}</p>;
+                        })}
+                    </div>
+                </div>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-lg border border-gray-200 space-y-3">
+                <h3 className="text-base font-semibold text-gray-800">Prescribed Medicines</h3>
+                <ul className="space-y-2">
+                    {prescribedIds.length > 0 ? (prescribedIds.map(medId => {
+                        const medicine = medicinesData[medId];
+                        const verificationTime = verifiedMeds[medId];
+                        return (
+                            <li key={medId} className={`flex items-center justify-between p-3 rounded-md border ${verificationTime ? 'bg-green-50 border-green-500' : 'bg-white border-gray-200'}`}>
+                                <div>
+                                    <span className="font-medium text-gray-700">{medicine.name}</span>
+                                    <span className="text-xs text-gray-500 block">{medId}</span>
+                                </div>
+                                <div className="flex items-center text-right">
+                                    <span className={`status-dot mr-2 ${verificationTime ? 'status-verified' : 'status-pending'}`}></span>
+                                    <div>
+                                        <span className={`text-sm font-medium ${verificationTime ? 'text-green-700' : 'text-amber-600'}`}>
+                                            {verificationTime ? 'Administered' : 'Pending'}
+                                        </span>
+                                        {verificationTime && <span className="text-xs text-gray-500 block">at {verificationTime.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>}
+                                    </div>
+                                </div>
+                            </li>
+                        );
+                    })) : <p className="text-gray-500 italic">No medications prescribed for this patient.</p>}
+                </ul>
+            </div>
+        </div>
+    );
+};
+
+const ChartView = ({ patient, onClear }) => {
+    const [activeTab, setActiveTab] = useState('background');
+    const tabs = ['background', 'summary', 'discharge', 'handoff', 'med-admin'];
+
+    return (
+        <div className="space-y-6 fade-in">
+            <div className="bg-blue-600 text-white rounded-2xl shadow-lg p-5">
+                <div className="flex justify-between items-start">
+                    <div>
+                        <h2 className="text-3xl font-bold">{patient.name}</h2>
+                        <div className="flex items-center space-x-4 mt-1 text-blue-100">
+                            <span>MRN: {patient.mrn}</span><span>FIN: {patient.fin}</span>
+                        </div>
+                    </div>
+                    <button onClick={onClear} className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 rounded-lg transition">Scan New Patient</button>
+                </div>
+                <div className="mt-4 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 text-sm">
+                    <div><strong>DOB:</strong> <span>{patient.dob}</span></div>
+                    <div><strong>Age:</strong> <span>{patient.age} years</span></div>
+                    <div><strong>Sex:</strong> <span>{patient.sex}</span></div>
+                    <div><strong>Dose Weight:</strong> <span>{patient.doseWeight}</span></div>
+                    <div><strong>Admitted:</strong> <span>{patient.admitted}</span></div>
+                    <div><strong className="text-yellow-300">Code Status:</strong> <span>{patient.codeStatus}</span></div>
+                    <div><strong className="text-red-300">Isolation:</strong> <span>{patient.isolation}</span></div>
+                </div>
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8">
+                <div className="border-b border-gray-200">
+                    <nav className="-mb-px flex space-x-6" aria-label="Tabs">
+                        {tabs.map(tab => (
+                            <a key={tab} onClick={() => setActiveTab(tab)} className={`cursor-pointer whitespace-nowrap py-3 px-1 border-b-2 font-medium text-sm capitalize ${activeTab === tab ? 'border-blue-500 text-blue-600' : 'border-transparent text-gray-500 hover:text-gray-700'}`}>
+                                {tab.replace('-', ' ')}
+                            </a>
+                        ))}
+                    </nav>
+                </div>
+                <div className="pt-6">
+                    {activeTab !== 'med-admin' && <div className="prose max-w-none" dangerouslySetInnerHTML={{ __html: patient.chartData[activeTab] || `<p>No information available for this section.</p>` }}></div>}
+                    {activeTab === 'med-admin' && <MedAdminTab patientId={patient.id} />}
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default function App() {
+    const [patients, setPatients] = useState(initialPatientsData);
+    const [currentPatient, setCurrentPatient] = useState(null);
+
+    const handleAddPatient = (newPatient) => {
+        setPatients(prev => ({ ...prev, [newPatient.id]: newPatient }));
+        alert(`Patient ${newPatient.name} added successfully with ID: ${newPatient.id}`);
+        // Go back to the scanner view after adding a patient
+        setCurrentPatient(null);
+    };
+
+    return (
+        <div className="w-full max-w-7xl mx-auto p-4 md:p-6">
+            {!currentPatient ? (
+                <HomeView 
+                    onScan={setCurrentPatient} 
+                    onAddPatient={handleAddPatient}
+                    patients={patients}
+                />
+            ) : (
+                <ChartView patient={currentPatient} onClear={() => setCurrentPatient(null)} />
+            )}
+        </div>

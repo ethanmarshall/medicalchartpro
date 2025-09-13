@@ -1,0 +1,435 @@
+default	22:19:49.902232-0400	lsd	com.medchart.pro/Unknown Persona:5:5:1:1:Building bundle record for app
+default	22:19:49.902364-0400	lsd	com.medchart.pro/Unknown Persona:5:5:2:1:Built bundle record for app
+default	22:19:49.928925-0400	lsd	com.medchart.pro/Unknown Persona:5:4:2:1:_LSServerRegisterItemInfo result = 0
+default	22:19:49.937711-0400	runningboardd	Launch request for app<application.com.medchart.pro.45466877.45466882(501)>[0] is using uid 501 (divined from auid 501 euid 501)
+default	22:19:49.937769-0400	runningboardd	Acquiring assertion targeting app<application.com.medchart.pro.45466877.45466882(501)> from originator [osservice<com.apple.coreservices.uiagent(501)>:568] with description <RBSAssertionDescriptor| "LS launch com.medchart.pro" ID:388-568-6645 target:app<application.com.medchart.pro.45466877.45466882(501)> attributes:[
+	<RBSDomainAttribute| domain:"com.apple.launchservicesd" name:"LaunchRoleUserInteractive" sourceEnvironment:"(null)">
+	]>
+default	22:19:49.937832-0400	runningboardd	Assertion 388-568-6645 (target:app<application.com.medchart.pro.45466877.45466882(501)>) will be created as active
+default	22:19:49.952105-0400	runningboardd	Executing launch request for app<application.com.medchart.pro.45466877.45466882(501)> (LS launch com.medchart.pro)
+default	22:19:49.952223-0400	runningboardd	Checking PreventLaunch: global:0 exPath:/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro predicates:(null) allow:(null)
+default	22:19:49.952332-0400	runningboardd	Creating and launching job for: app<application.com.medchart.pro.45466877.45466882(501)>
+default	22:19:49.952481-0400	runningboardd	_mutateContextIfNeeded called for com.medchart.pro
+default	22:19:49.952827-0400	runningboardd	app<application.com.medchart.pro.45466877.45466882(501)>: -[RBPersonaManager personaForIdentity:context:personaUID:personaUniqueString:] required 0.000000 ms (wallclock); resolved to {4294967295, (null)}
+default	22:19:49.953071-0400	runningboardd	'app<application.com.medchart.pro.45466877.45466882(501)>' Constructed job description:
+<dictionary: 0x924e6f060> { count = 23, transaction: 0, voucher = 0x0, contents =
+	"Platform" => <int64: 0xa6a9f7d829a3d6ff>: 1
+	"ProcessType" => <string: 0x924e69c50> { length = 3, contents = "App" }
+	"EnableTransactions" => <bool: 0x1e862d2e0>: false
+	"_ManagedBy" => <string: 0x924e6b150> { length = 22, contents = "com.apple.runningboard" }
+	"CFBundleIdentifier" => <string: 0x924e68150> { length = 16, contents = "com.medchart.pro" }
+	"_ResourceCoalition" => <string: 0x924e68c00> { length = 56, contents = "app<application.com.medchart.pro.45466877.45466882(501)>" }
+	"_DisablePointerAuth" => <bool: 0x1e862d2c0>: true
+	"ThrottleInterval" => <int64: 0xa6a9f7dbd65c290f>: 2147483647
+	"MachServices" => <dictionary: 0x924e037e0> { count = 0, transaction: 0, voucher = 0x0, contents =
+	}
+	"EnablePressuredExit" => <bool: 0x1e862d2e0>: false
+	"LimitLoadToSessionType" => <array: 0x924e68960> { count = 2, capacity = 8, contents =
+		0: <string: 0x924e6ac10> { length = 4, contents = "Aqua" }
+		1: <string: 0x924e69fb0> { length = 11, contents = "LoginWindow" }
+	}
+	"InitialTaskRole" => <int64: 0xa6a9f7d829a3d6e7>: 2
+	"EnvironmentVariables" => <dictionary: 0x924e02580> { count = 13, transaction: 0, voucher = 0x0, contents =
+		"__CF_USER_TEXT_ENCODING" => <string: 0x924e6ac40> { length = 13, contents = "0x1F5:0x0:0x0" }
+		"TMPDIR" => <string: 0x924e68e70> { length = 49, contents = "/var/folders/v3/4f__zvmn701cmtx47b08fjrh0000gn/T/" }
+		"SHELL" => <string: 0x924e6b7e0> { length = 8, contents = "/bin/zsh" }
+		"HOME" => <string: 0x924e686c0> { length = 20, contents = "/Users/ethanmarshall" }
+		"SSH_AUTH_SOCK" => <string: 0x924e682a0> { length = 51, contents = "/private/tmp/com.apple.launchd.1v3mp24332/Listeners" }
+		"LOGNAME" => <string: 0x924e69f80> { length = 13, contents = "ethanmarshall" }
+		"PATH" => <string: 0x924e6a3d0> { length = 29, contents = "/usr/bin:/bin:/usr/sbin:/sbin" }
+		"XPC_SERVICE_NAME" => <string: 0x924e689c0> { length = 16, contents = "com.apple.Finder" }
+		"__CFBundleIdentifier" => <string: 0x924e6a460> { length = 16, contents = "com.medchart.pro" }
+		"COMMAND_MODE" => <string: 0x924e68de0> { length = 8, contents = "unix2003" }
+		"USER" => <string: 0x924e69950> { length = 13, contents = "ethanmarshall" }
+		"MallocNanoZone" => <string: 0x924e6a400> { length = 1, contents = "0" }
+		"XPC_FLAGS" => <string: 0x924e6b360> { length = 3, contents = "0x0" }
+	}
+	"_AdditionalProperties" => <dictionary: 0x924e6f1e0> { count = 1, transaction: 0, voucher = 0x0, contents =
+		"RunningBoard" => <dictionary: 0x924e6f480> { count = 4, transaction: 0, voucher = 0x0, contents =
+			"TMPDIR" => <string: 0x924e6a5b0> { length = 49, contents = "/var/folders/v3/4f__zvmn701cmtx47b08fjrh0000gn/T/" }
+			"HOME" => <string: 0x924e68090> { length = 20, contents = "/Users/ethanmarshall" }
+			"RunningBoardLaunchedIdentity" => <dictionary: 0x924e00f00> { count = 5, transaction: 0, voucher = 0x0, contents =
+				"AJL" => <string: 0x924e6a490> { length = 46, contents = "application.com.medchart.pro.45466877.45466882" }
+				"TYPE" => <int64: 0xa6a9f7d829a3d6ff>: 1
+				"AUID" => <uint64: 0xa629f7d829a3d95f>: 501
+				"EAI" => <string: 0x924e68030> { length = 16, contents = "com.medchart.pro" }
+				"PLAT" => <uint64: 0xa629f7d829a3d6ff>: 1
+			}
+			"RunningBoardLaunched" => <bool: 0x1e862d2c0>: true
+		}
+	}
+	"ExitTimeOut" => <int64: 0xa6a9f7d829a3d6ff>: 1
+	"Label" => <string: 0x924e6b690> { length = 46, contents = "application.com.medchart.pro.45466877.45466882" }
+	"WaitForDebugger" => <bool: 0x1e862d2c0>: true
+	"MaterializeDatalessFiles" => <bool: 0x1e862d2c0>: true
+	"WorkingDirectory" => <string: 0x924e69e60> { length = 1, contents = "/" }
+	"_LaunchType" => <int64: 0xa6a9f7d829a3d6ef>: 3
+	"AbandonProcessGroup" => <bool: 0x1e862d2c0>: true
+	"ProgramArguments" => <array: 0x924e6b540> { count = 1, capacity = 8, contents =
+		0: <string: 0x924e6abe0> { length = 109, contents = "/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro" }
+	}
+	"Program" => <string: 0x924e6b8d0> { length = 109, contents = "/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro" }
+}
+default	22:19:49.970141-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro' has no CMS blob?
+default	22:19:49.970158-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro': Unrecoverable CT signature issue, bailing out.
+default	22:19:49.972450-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] is not RunningBoard jetsam managed.
+default	22:19:49.972533-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] This process will not be managed.
+default	22:19:49.972613-0400	runningboardd	Now tracking process: [app<application.com.medchart.pro.45466877.45466882(501)>:25600]
+default	22:19:49.973124-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractive) (endowments: <private>)
+default	22:19:49.977598-0400	gamepolicyd	Hit the server for a process handle fb7362d00006400 that resolved to: [app<application.com.medchart.pro.45466877.45466882(501)>:25600]
+default	22:19:49.977639-0400	gamepolicyd	Received state update for 25600 (app<application.com.medchart.pro.45466877.45466882(501)>, running-active-NotVisible
+default	22:19:49.990432-0400	runningboardd	Using default underlying assertion for app: [app<application.com.medchart.pro.45466877.45466882(501)>:25600]
+default	22:19:49.990504-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [app<application.com.medchart.pro.45466877.45466882(501)>:25600] with description <RBSAssertionDescriptor| "RB Underlying Assertion" ID:388-388-6646 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.underlying" name:"defaultUnderlyingAppAssertion" sourceEnvironment:"(null)">,
+	<RBSAcquisitionCompletionAttribute| policy:AfterApplication>
+	]>
+default	22:19:49.990727-0400	runningboardd	Assertion 388-388-6646 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:49.991580-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:49.991806-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] reported to RB as running
+default	22:19:49.991676-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:49.992403-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Set darwin role to: UserInteractive
+default	22:19:49.992511-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:49.992710-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:49.995852-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [osservice<com.apple.coreservices.launchservicesd>:352] with description <RBSAssertionDescriptor| "foregroundApp:25600" ID:388-352-6647 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.launchservicesd" name:"RoleUserInteractiveNonFocal" sourceEnvironment:"(null)">
+	]>
+default	22:19:49.996040-0400	runningboardd	Assertion 388-352-6647 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:50.000371-0400	CoreServicesUIAgent	LAUNCH: 0x0-0x1da1da com.medchart.pro starting stopped process.
+default	22:19:50.003643-0400	distnoted	register name: com.apple.sharedfilelist.change object: com.apple.LSSharedFileList.ApplicationRecentDocuments/com.medchart.pro token: 7200000030 pid: 626
+default	22:19:50.019347-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractive) (endowments: <private>)
+default	22:19:50.020344-0400	runningboardd	Invalidating assertion 388-568-6645 (target:app<application.com.medchart.pro.45466877.45466882(501)>) from originator [osservice<com.apple.coreservices.uiagent(501)>:568]
+default	22:19:50.999767-0400	loginwindow	-[PersistentAppsSupport applicationReady:] | App: MedChart Pro, ready, updating active tracking timer
+default	22:19:50.999809-0400	loginwindow	-[ApplicationManager checkInAppContext:eventData:] | ApplicationManager: Checked in app : MedChart Pro
+default	22:19:50.040011-0400	lsd	com.medchart.pro/Unknown Persona:5:5:1:1:Building bundle record for app
+default	22:19:50.040214-0400	lsd	com.medchart.pro/Unknown Persona:5:5:2:1:Built bundle record for app
+default	22:19:50.041646-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractive) (endowments: <private>)
+default	22:19:50.062865-0400	lsd	com.medchart.pro/Unknown Persona:5:4:2:1:_LSServerRegisterItemInfo result = 0
+default	22:19:50.067815-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:50.067836-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:50.067853-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:50.067936-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:50.067991-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:50.068056-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:50.068101-0400	runningboardd	Successfully acquired underlying assertion for [app<application.com.medchart.pro.45466877.45466882(501)>:25600]
+default	22:19:50.068121-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:50.068252-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:50.071922-0400	gamepolicyd	Received state update for 25600 (app<application.com.medchart.pro.45466877.45466882(501)>, running-active-NotVisible
+default	22:19:50.126662-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:50.126771-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:50.126837-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Set darwin role to: UserInteractiveNonFocal
+default	22:19:50.126883-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:50.126975-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:50.137417-0400	gamepolicyd	Received state update for 25600 (app<application.com.medchart.pro.45466877.45466882(501)>, running-active-NotVisible
+default	22:19:50.141072-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractiveNonFocal) (endowments: <private>)
+default	22:19:50.142752-0400	gamepolicyd	Received state update for 25600 (app<application.com.medchart.pro.45466877.45466882(501)>, running-active-NotVisible
+default	22:19:50.144856-0400	lsd	com.medchart.pro/Unknown Persona:5:5:1:1:Building bundle record for app
+default	22:19:50.144984-0400	lsd	com.medchart.pro/Unknown Persona:5:5:2:1:Built bundle record for app
+default	22:19:50.175719-0400	lsd	com.medchart.pro/Unknown Persona:5:4:2:1:_LSServerRegisterItemInfo result = 0
+default	22:19:50.182936-0400	lsd	com.medchart.pro/Unknown Persona:5:5:1:1:Building bundle record for app
+default	22:19:50.183047-0400	lsd	com.medchart.pro/Unknown Persona:5:5:2:1:Built bundle record for app
+default	22:19:50.218630-0400	lsd	com.medchart.pro/Unknown Persona:5:4:2:1:_LSServerRegisterItemInfo result = 0
+default	22:19:50.315696-0400	dmd	Received xpc stream event (distributed notification matching) with name: com.apple.LaunchServices.applicationRegistered user info: {
+    CFBundleDisplayName = "MedChart Pro";
+    bundleIDs =     (
+        "com.medchart.pro"
+    );
+    isPlaceholder = 0;
+}
+default	22:19:50.335599-0400	nehelper	Received an apps installed notification with bundle IDs (
+    "com.medchart.pro"
+)
+default	22:19:50.336359-0400	nehelper	Received an apps installed notification with bundle IDs (
+    "com.medchart.pro"
+)
+default	22:19:50.336416-0400	nehelper	Received an apps installed notification with bundle IDs (
+    "com.medchart.pro"
+)
+default	22:19:50.934437-0400	nehelper	Removing UUIDs for (
+    "com.medchart.pro"
+)
+default	22:19:51.687730-0400	syspolicyd	GK evaluateScanResult: 2, PST: (path: a08c0a8cc096190), (team: (null)), (id: Electron), (bundle_id: com.medchart.pro), 0, 0, 1, 0, 8, 0, 0
+default	22:19:51.688594-0400	tccd	AUTHREQ_ATTRIBUTION: msgID=498.34, attribution={accessing={TCCDProcess: identifier=Electron, pid=25600, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro}, requesting={TCCDProcess: identifier=com.apple.syspolicyd, pid=498, auid=0, euid=0, binary_path=/usr/libexec/syspolicyd}, },
+default	22:19:51.700706-0400	tccd	AUTHREQ_SUBJECT: msgID=498.34, subject=com.medchart.pro,
+default	22:19:51.702918-0400	tccd	-[TCCDAccessIdentity staticCode]: static code for: identifier com.medchart.pro, type: 0: 0xa2837cf00 at /Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app
+default	22:19:51.709860-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework' has no CMS blob?
+default	22:19:51.709875-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.717453-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel' has no CMS blob?
+default	22:19:51.717467-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Squirrel.framework/Versions/A/Squirrel': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.717763-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/ReactiveObjC.framework/Versions/A/ReactiveObjC' has no CMS blob?
+default	22:19:51.717772-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/ReactiveObjC.framework/Versions/A/ReactiveObjC': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.718003-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Mantle.framework/Versions/A/Mantle' has no CMS blob?
+default	22:19:51.718010-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Mantle.framework/Versions/A/Mantle': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.719063-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib' has no CMS blob?
+default	22:19:51.719074-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libffmpeg.dylib': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.751970-0400	MedChart Pro	[0x11c002e0c00] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.daemon
+default	22:19:51.752019-0400	MedChart Pro	[0x11c002e0d00] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.agent
+default	22:19:51.756510-0400	MedChart Pro	[0x11c002e0e00] activating connection: mach=true listener=false peer=false name=com.apple.coreservices.launchservicesd
+default	22:19:51.756911-0400	MedChart Pro	[0x11c002e1100] activating connection: mach=true listener=false peer=false name=com.apple.analyticsd
+default	22:19:51.757330-0400	MedChart Pro	[0x11c002e1400] activating connection: mach=true listener=false peer=false name=com.apple.pasteboard.1
+default	22:19:51.757915-0400	MedChart Pro	[0x11c002e1800] activating connection: mach=true listener=false peer=false name=com.apple.distributed_notifications@Uv3
+default	22:19:51.759824-0400	MedChart Pro	void _NSDisableAutomaticTerminationAndLog(NSString *) No windows open yet
+default	22:19:51.761040-0400	MedChart Pro	[0x11c002e1d00] activating connection: mach=true listener=false peer=false name=com.apple.tccd.system
+default	22:19:51.761543-0400	tccd	AUTHREQ_ATTRIBUTION: msgID=25600.1, attribution={requesting={TCCDProcess: identifier=Electron, pid=25600, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro}, },
+default	22:19:51.766395-0400	tccd	AUTHREQ_SUBJECT: msgID=25600.1, subject=com.medchart.pro,
+default	22:19:51.768502-0400	tccd	-[TCCDAccessIdentity staticCode]: static code for: identifier com.medchart.pro, type: 0: 0xa2837d500 at /Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app
+default	22:19:51.769731-0400	MedChart Pro	[0x11c002e1d00] invalidated after the last release of the connection object
+default	22:19:51.769886-0400	MedChart Pro	server port 0x00003507, session port 0x00003507
+default	22:19:51.771787-0400	tccd	AUTHREQ_ATTRIBUTION: msgID=381.307, attribution={accessing={TCCDProcess: identifier=Electron, pid=25600, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro}, requesting={TCCDProcess: identifier=com.apple.WindowServer, pid=381, auid=88, euid=88, binary_path=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer}, },
+default	22:19:51.771845-0400	tccd	requestor: TCCDProcess: identifier=com.apple.WindowServer, pid=381, auid=88, euid=88, binary_path=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer is checking access for accessor TCCDProcess: identifier=Electron, pid=25600, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro
+default	22:19:51.774502-0400	tccd	AUTHREQ_SUBJECT: msgID=381.307, subject=com.medchart.pro,
+default	22:19:51.776465-0400	tccd	-[TCCDAccessIdentity staticCode]: static code for: identifier com.medchart.pro, type: 0: 0xa2837d500 at /Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app
+default	22:19:51.782520-0400	MedChart Pro	New connection 0xcaab3 main
+default	22:19:51.787338-0400	MedChart Pro	CHECKIN: pid=25600
+default	22:19:51.792645-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [osservice<com.apple.coreservices.launchservicesd>:352] with description <RBSAssertionDescriptor| "foregroundApp:25600" ID:388-352-6648 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.launchservicesd" name:"RoleUserInteractiveNonFocal" sourceEnvironment:"(null)">
+	]>
+default	22:19:51.792727-0400	runningboardd	Assertion 388-352-6648 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:51.792484-0400	launchservicesd	CHECKIN:0x0-0x1da1da 25600 com.medchart.pro
+default	22:19:51.792655-0400	MedChart Pro	CHECKEDIN: pid=25600 asn=0x0-0x1da1da foreground=1
+default	22:19:51.793343-0400	runningboardd	Invalidating assertion 388-352-6647 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) from originator [osservice<com.apple.coreservices.launchservicesd>:352]
+default	22:19:51.792814-0400	MedChart Pro	[0x11c00330b40] activating connection: mach=false listener=true peer=false name=(anonymous)
+default	22:19:51.792823-0400	MedChart Pro	[0x11c00330b40] Channel could not return listener port.
+default	22:19:51.792654-0400	loginwindow	-[ApplicationManager checkInAppContext:eventData:] | ApplicationManager: Checked in app : MedChart Pro
+default	22:19:51.793111-0400	MedChart Pro	[0x11c00331180] activating connection: mach=false listener=false peer=true name=com.apple.xpc.anonymous.0x11c00330b40.peer[352].0x11c00331180
+default	22:19:51.796735-0400	MedChart Pro	FRONTLOGGING: version 1
+default	22:19:51.796915-0400	MedChart Pro	Registered, pid=25600 ASN=0x0,0x1da1da
+default	22:19:51.799994-0400	MedChart Pro	[0x11c00331400] activating connection: mach=true listener=false peer=false name=com.apple.lsd.mapdb
+default	22:19:51.800642-0400	MedChart Pro	[0x11c00330b40] Channel could not return listener port.
+default	22:19:51.802210-0400	MedChart Pro	BringForward: pid=25600 asn=0x0-0x1da1da bringForward=1 foreground=1 uiElement=0 launchedByLS=1 modifiersCount=1 allDisabled=0
+default	22:19:51.802596-0400	MedChart Pro	BringFrontModifier: pid=25600 asn=0x0-0x1da1da Modifier 0 hideAfter=0 hideOthers=0 dontMakeFrontmost=0 mouseDown=0/0 seed=0/0
+default	22:19:51.802862-0400	MedChart Pro	BringForward: pid=25600 asn=0x0-0x1da1da
+default	22:19:51.802985-0400	MedChart Pro	SetFrontProcess: asn=0x0-0x1da1da options=0
+default	22:19:51.807971-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [osservice<com.apple.WindowServer(88)>:381] with description <RBSAssertionDescriptor| "FUSBFrontmostProcess" ID:388-381-6649 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.fuseboard" name:"Frontmost" sourceEnvironment:"(null)">,
+	<RBSAcquisitionCompletionAttribute| policy:AfterApplication>
+	]>
+default	22:19:51.808124-0400	runningboardd	Assertion 388-381-6649 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:51.811271-0400	MedChart Pro	Current system appearance, (HLTB: 2), (SLS: 1)
+default	22:19:51.814014-0400	MedChart Pro	No persisted cache on this platform.
+default	22:19:51.817476-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:51.817728-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:51.817898-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Set darwin role to: UserInteractiveFocal
+default	22:19:51.818088-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:51.818428-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:51.817292-0400	MedChart Pro	Current system appearance, (HLTB: 2), (SLS: 1)
+default	22:19:51.818541-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] visiblity is yes
+default	22:19:51.818295-0400	MedChart Pro	Post-registration system appearance: (HLTB: 2)
+default	22:19:51.822796-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [osservice<com.apple.coreservices.launchservicesd>:352] with description <RBSAssertionDescriptor| "frontmost:25600" ID:388-352-6650 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.launchservicesd" name:"RoleUserInteractiveFocal" sourceEnvironment:"(null)">
+	]>
+default	22:19:51.837958-0400	MedChart Pro	[0x11c00330b40] Channel could not return listener port.
+default	22:19:51.839709-0400	distnoted	register name: com.apple.xctest.FakeForceTouchDevice object: com.medchart.pro token: 1e0000001d pid: 25600
+default	22:19:51.840639-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractiveFocal) (endowments: <private>)
+default	22:19:51.841212-0400	gamepolicyd	Received state update for 25600 (app<application.com.medchart.pro.45466877.45466882(501)>, running-active-NotVisible
+default	22:19:51.829994-0400	runningboardd	Assertion 388-352-6650 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:51.841531-0400	MedChart Pro	[0x11c00330b40] Channel could not return listener port.
+default	22:19:51.842726-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:51.842791-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:51.842860-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:51.843007-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:51.847064-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [osservice<com.apple.coreservices.launchservicesd>:352] with description <RBSAssertionDescriptor| "notification:25600" ID:388-352-6651 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.launchservicesd" name:"LSNotification" sourceEnvironment:"(null)">
+	]>
+default	22:19:51.847517-0400	runningboardd	Assertion 388-352-6651 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:51.864717-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractiveFocal) (endowments: <private>)
+default	22:19:51.865943-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:51.866004-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:51.866065-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:51.866214-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:51.945998-0400	MedChart Pro	[SKPaymentQueue] Adding storefront listener
+default	22:19:51.924294-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractiveFocal) (endowments: <private>)
+default	22:19:51.946114-0400	MedChart Pro	[deadd207] currentStorefront needs update
+default	22:19:51.946124-0400	MedChart Pro	[8b1bee82] Initializing StorefrontListener
+default	22:19:51.946455-0400	MedChart Pro	[0x13c018fd6e0] activating connection: mach=true listener=false peer=false name=com.apple.storekitagent
+default	22:19:51.946608-0400	MedChart Pro	[<SKPaymentQueue: 0x13c000a3f00>] Adding purchase intent listener
+default	22:19:51.947122-0400	MedChart Pro	[1af1583d] Requesting purchase intents after 2025-09-08 02:04:51 +0000
+default	22:19:51.947242-0400	MedChart Pro	NSApp cache appearance:
+-NSRequiresAquaSystemAppearance: 0
+-appearance: (null)
+-effectiveAppearance: <NSCompositeAppearance: 0x11c002d5500
+ (
+    "<NSDarkAquaAppearance: 0x11c002d5a00>",
+    "<NSSystemAppearance: 0x11c002d4e00>"
+)>
+default	22:19:51.947572-0400	gamepolicyd	Received state update for 25600 (app<application.com.medchart.pro.45466877.45466882(501)>, running-active-NotVisible
+default	22:19:51.958081-0400	storekitagent	[Client] (MedChart Pro) Initialized with server Sandbox bundle ID com.medchart.pro and request bundle ID com.medchart.pro]
+default	22:19:51.958292-0400	storekitagent	Accepting new connection MedChart Pro[25600]
+default	22:19:51.958379-0400	MedChart Pro	{"msg":"CLLocationManager", "event":"activity", "_cmd":"initWithEffectiveBundleIdentifier:bundlePath:delegate:silo:", "self":"0x13c02cc5250", "identifier":"", "bundlePath":""}
+default	22:19:51.958535-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"init", "new":{"trackRunInfoEnabled":false,"previousAuthorizationStatusValid":false,"paused":false,"requestingLocation":false,"updatingVehicleSpeed":false,"desiredAccuracy":100,"allowsBackgroundLocationUpdates":false,"dynamicAccuracyReductionEnabled":false,"distanceFilter":-1,"allowsLocationPrompts":true,"activityType":0,"groundAltitudeEnabled":false,"pausesLocationUpdatesAutomatically":1,"fusionInfoEnabled":false,"isAuthorizedForWidgetUpdates":false,"updatingVehicleHeading":false,"batchingLocation":false,"showsBackgroundLocationIndicator":false,"updatingLocation":false,"updatingHeading":false,"previousAuthorizationStatus":0,"allowsMapCorrection":true,"matchInfoEnabled":false,"allowsAlteredAccessoryLocations":false,"limitsPrecision":false,"courtesyPromptNeeded":false,"headingFilter":1}}
+default	22:19:51.958667-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"lifecycle", "old":"0x0", "new":"0x13c000d2d00"}
+default	22:19:51.958859-0400	MedChart Pro	{"msg":"client allocated", "client":"0x13c008c1340"}
+default	22:19:51.959518-0400	MedChart Pro	{"msg":"_CLClientCreateConnection", "event":"activity", "client":"0x13c008c1340"}
+default	22:19:51.960282-0400	MedChart Pro	{"msg":"Requesting registration verification from CLAgent", "UUID":"60D6DA7B-1CBA-4AEB-B7A3-DAC4495A3302"}
+default	22:19:51.960722-0400	MedChart Pro	[0x13c00361700] activating connection: mach=true listener=true peer=false name=com.apple.locationd-events
+default	22:19:51.960871-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"distanceFilter", "old":"-1.000000", "new":"-1.000000"}
+default	22:19:51.960962-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"desiredAccuracy", "old":"100.000000", "new":"-1.000000"}
+default	22:19:51.961049-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"updatingLocation", "old":0, "new":0}
+default	22:19:51.961167-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"updatingHeading", "old":0, "new":0}
+default	22:19:51.961328-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"headingFilter", "old":"1.000000", "new":"1.000000"}
+default	22:19:51.961457-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"allowsLocationPrompts", "old":1, "new":1}
+default	22:19:51.961574-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"dynamicAccuracyReductionEnabled", "old":0, "new":0}
+default	22:19:51.961719-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"paused", "old":0, "new":0}
+default	22:19:51.961869-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"allowsMapCorrection", "old":1, "new":1}
+default	22:19:51.961970-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"batchingLocation", "old":0, "new":0}
+default	22:19:51.962114-0400	MedChart Pro	{"msg":"CLLocationManager", "event":"activity", "_cmd":"setDelegate:", "self":"0x13c02cc5250", "delegate":"0x13c02cc9a50"}
+default	22:19:51.962297-0400	MedChart Pro	{"msg":"Sending cached messages to daemon", "event":"activity"}
+default	22:19:51.962378-0400	MedChart Pro	[0x13c00191680] activating connection: mach=true listener=false peer=false name=com.apple.locationd.desktop.registration
+default	22:19:51.962502-0400	MedChart Pro	networkd_settings_read_from_file initialized networkd settings by reading plist directly
+default	22:19:51.962687-0400	MedChart Pro	networkd_settings_read_from_file initialized networkd settings by reading plist directly
+default	22:19:51.964591-0400	MedChart Pro	[0x13c00362000] activating connection: mach=true listener=false peer=false name=com.apple.SystemConfiguration.DNSConfiguration
+default	22:19:51.964914-0400	MedChart Pro	[0x13c00362000] invalidated after the last release of the connection object
+default	22:19:51.965044-0400	MedChart Pro	[0x13c00361f00] activating connection: mach=true listener=false peer=false name=com.apple.SystemConfiguration.DNSConfiguration
+default	22:19:51.965338-0400	MedChart Pro	[0x13c00361f00] invalidated after the last release of the connection object
+default	22:19:51.966950-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/MedChart Pro Helper (GPU).app/Contents/MacOS/MedChart Pro Helper (GPU)' has no CMS blob?
+default	22:19:51.966963-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/MedChart Pro Helper (GPU).app/Contents/MacOS/MedChart Pro Helper (GPU)': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.968611-0400	storekitagent	[Client] (MedChart Pro) Initialized with server Sandbox bundle ID com.medchart.pro and request bundle ID com.medchart.pro]
+default	22:19:51.969945-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/MedChart Pro Helper.app/Contents/MacOS/MedChart Pro Helper' has no CMS blob?
+default	22:19:51.969949-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/MedChart Pro Helper.app/Contents/MacOS/MedChart Pro Helper': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.972453-0400	MedChart Pro	Registering for test daemon availability notify post.
+default	22:19:51.972649-0400	MedChart Pro	notify_get_state check indicated test daemon not ready.
+default	22:19:51.972851-0400	MedChart Pro	notify_get_state check indicated test daemon not ready.
+default	22:19:51.972923-0400	MedChart Pro	notify_get_state check indicated test daemon not ready.
+default	22:19:51.977832-0400	storekitagent	[Client] (MedChart Pro) Initialized with server Sandbox bundle ID com.medchart.pro and request bundle ID com.medchart.pro]
+error	22:19:51.978305-0400	MedChart Pro	[deadd207] Request failed with error Error Domain=StoreKit_Shared.StoreKitInternalError Code=6 "(null)"
+error	22:19:51.978347-0400	MedChart Pro	[deadd207] Error updating Storefront: Error Domain=StoreKit_Shared.StoreKitInternalError Code=6 "(null)"
+default	22:19:51.978399-0400	MedChart Pro	[deadd207] currentStorefront updated to nil
+default	22:19:51.979717-0400	MedChart Pro	OSEligibilityState.current(): output: OSEligibilityState(answer: GenerativeModelsFoundation.OSEligibilityState.Answer.eligible(GenerativeModelsFoundation.OSEligibilityState.Answer.EligibleInfo()), source: computed)
+default	22:19:51.979734-0400	MedChart Pro	answer_source: computed
+default	22:19:51.980099-0400	MedChart Pro	isAvailable: featureEnabled = true, isMDMAllowed = true, gmAvailable (current) = true
+default	22:19:51.986480-0400	storekitagent	[Client] (MedChart Pro) Initialized with server Sandbox bundle ID com.medchart.pro and request bundle ID com.medchart.pro]
+default	22:19:51.987291-0400	storekitagent	No revocations in database for DSID: 565467156, bundleID: com.medchart.pro
+default	22:19:51.997648-0400	storekitagent	[Client] (MedChart Pro) Initialized with server Sandbox bundle ID com.medchart.pro and request bundle ID com.medchart.pro]
+default	22:19:51.993038-0400	CoreLocationAgent	copy_client_info pid:25600, bundleId:com.medchart.pro, execPath:/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro, bundlePath:/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app
+error	22:19:51.998265-0400	MedChart Pro	[8b1bee82] Request failed with error Error Domain=StoreKit_Shared.StoreKitInternalError Code=6 "(null)"
+error	22:19:51.998405-0400	MedChart Pro	[8b1bee82] Error updating Storefront: Error Domain=StoreKit_Shared.StoreKitInternalError Code=6 "(null)"
+default	22:19:52.001159-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libGLESv2.dylib' has no CMS blob?
+default	22:19:52.001168-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libGLESv2.dylib': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.996623-0400	locationd	{"msg":"CLDC waiting for agent; identity unverified", "this":"0x790a41e00", "NaturalKeyPath":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:"}
+default	22:19:52.002773-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libEGL.dylib' has no CMS blob?
+default	22:19:52.002778-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Libraries/libEGL.dylib': Unrecoverable CT signature issue, bailing out.
+default	22:19:51.996638-0400	locationd	{"msg":"state transition", "event":"state_transition", "state":"DaemonClient", "id":"0x790a41e00", "property":"clientKeyPath", "old":"", "new":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:"}
+default	22:19:51.996907-0400	locationd	{"msg":"Created CLDC for connecting client", "CLDC":"0x790a41e00", "ConnectingMessage":"LocationManager\/kCLConnectionMessageRegistration", "ClientKeyPath":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:", "RegistrationComplete":0}
+default	22:19:52.006623-0400	storekitagent	[Client] (MedChart Pro) Initialized with server Sandbox bundle ID com.medchart.pro and request bundle ID com.medchart.pro]
+default	22:19:52.006820-0400	storekitagent	[1af1583d] Querying com.medchart.pro purchase intents
+default	22:19:52.008008-0400	distnoted	register name: com.apple.nsquiet_safe_quit_give_reason object: com.medchart.pro token: 320000002d pid: 25600
+default	22:19:52.007378-0400	CoreLocationAgent	Sending registration to locationd - pid:25600, uuid:60D6DA7B-1CBA-4AEB-B7A3-DAC4495A3302, bundleId:com.medchart.pro, bundlePath:/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app, execPath:/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro, isPlugin:0, requirement:cdhash H"5195eea81093e7c5d09a8729e1d258d6e633733b"
+default	22:19:52.010273-0400	MedChart Pro	[0x13c00366f00] activating connection: mach=true listener=false peer=false name=com.apple.dock.fullscreen
+default	22:19:52.013200-0400	locationd	{"msg":"#registration UUID mapping", "UUID":"60D6DA7B-1CBA-4AEB-B7A3-DAC4495A3302", "clientName":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:com.medchart.pro", "pid":25600}
+default	22:19:52.012651-0400	MedChart Pro	[0x13c02ce72c0] activating connection: mach=true listener=false peer=false name=com.apple.fonts
+default	22:19:52.021022-0400	MedChart Pro	[0x13c00367800] activating connection: mach=true listener=false peer=false name=com.apple.coreservices.appleevents
+default	22:19:52.021995-0400	locationd	{"msg":"#registration Found client identity match! Associating...", "registrationClientUUID":"60D6DA7B-1CBA-4AEB-B7A3-DAC4495A3302", "daemonClientUUID":"60D6DA7B-1CBA-4AEB-B7A3-DAC4495A3302", "prevDaemonClientName":"com.medchart.pro"}
+default	22:19:52.022008-0400	locationd	{"msg":"state transition", "event":"state_transition", "state":"DaemonClient", "id":"0x790a41e00", "property":"clientKeyPath", "old":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:", "new":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:"}
+default	22:19:52.022267-0400	locationd	{"msg":"computing freshAuthorizationContext", "Client":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:", "ClientDictionary":"{\n    AlwaysServiceSession = 0;\n    BundleId = \"com.medchart.pro\";\n    BundlePath = \"\/Users\/ethanmarshall\/Desktop\/medchartpro\/dist-electron\/mac-arm64\/MedChart Pro.app\";\n    ClientStorageToken = {length = 32, bytes = 0xc104313a 29e346ec 20641f93 71276906 ... 1a3ab8fc d19f9b03 };\n    Executable = \"\/Users\/ethanmarshall\/Desktop\/medchartpro\/dist-electron\/mac-arm64\/MedChart Pro.app\/Contents\/MacOS\/MedChart Pro\";\n    InUseLevel = 0;\n    PassiveServiceSession = 0;\n    PluginBundleIds =     (\n    );\n    Registered = 1;\n    Requirement = \"cdhash H\\\"5195eea81093e7c5d09a8729e1d258d6e633733b\\\"\";\n    SessionWithOldLinking = 0;\n    WhenInUseServiceSession = 0;\n}", "BigSwitch":1, "InUseLevel":"kCLClientInUseLevelNotInUse"}
+default	22:19:52.023509-0400	MedChart Pro	[0x11c00330b40] Channel could not return listener port.
+default	22:19:52.024036-0400	MedChart Pro	SignalReady: pid=25600 asn=0x0-0x1da1da
+default	22:19:52.025059-0400	MedChart Pro	SIGNAL: pid=25600 asn=0x0x-0x1da1da
+default	22:19:52.025680-0400	loginwindow	-[PersistentAppsSupport applicationReady:] | App: MedChart Pro, ready, updating active tracking timer
+default	22:19:52.023889-0400	locationd	{"msg":"#AuthContext Set authorization context", "ckp":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:", "prevAuthContext":"AuthContext InUse:0  RegResult:5(5) EffectiveMask:0  ProvisionalMask:0  DiagnosticMask:0", "newAuthContext":"AuthContext InUse:0  RegResult:4(4) EffectiveMask:1572864  ProvisionalMask:1572864  DiagnosticMask:0"}
+default	22:19:52.026794-0400	locationd	{"msg":"computing freshAuthorizationContext", "Client":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:", "ClientDictionary":"{\n    AlwaysServiceSession = 0;\n    BundleId = \"com.medchart.pro\";\n    BundlePath = \"\/Users\/ethanmarshall\/Desktop\/medchartpro\/dist-electron\/mac-arm64\/MedChart Pro.app\";\n    ClientStorageToken = {length = 32, bytes = 0xc104313a 29e346ec 20641f93 71276906 ... 1a3ab8fc d19f9b03 };\n    Executable = \"\/Users\/ethanmarshall\/Desktop\/medchartpro\/dist-electron\/mac-arm64\/MedChart Pro.app\/Contents\/MacOS\/MedChart Pro\";\n    InUseLevel = 0;\n    PassiveServiceSession = 0;\n    PluginBundleIds =     (\n    );\n    Registered = 1;\n    Requirement = \"cdhash H\\\"5195eea81093e7c5d09a8729e1d258d6e633733b\\\"\";\n    SessionWithOldLinking = 0;\n    WhenInUseServiceSession = 0;\n}", "BigSwitch":1, "InUseLevel":"kCLClientInUseLevelNotInUse"}
+default	22:19:52.028892-0400	locationd	{"msg":"#PersistentSubscription PersistenceBackend removeAllPersistedDataForSubscription", "client":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:", "storageName":"VisitMonitoring"}
+default	22:19:52.030097-0400	locationd	{"msg":"Registration complete for client", "this":"0x790a41e00", "Client":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:"}
+default	22:19:52.032898-0400	tccd	AUTHREQ_ATTRIBUTION: msgID=381.308, attribution={responsible={TCCDProcess: identifier=Electron, pid=25600, auid=501, euid=501, responsible_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro}, accessing={TCCDProcess: identifier=Electron Helper (GPU), pid=25602, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/MedChart Pro Helper (GPU).app/Contents/MacOS/MedChart Pro Helper (GPU)}, requesting={TCCDProcess: identifier=com.apple.WindowServer, pid=381, auid=88, euid=88, binary_path=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer}, },
+default	22:19:52.032954-0400	tccd	requestor: TCCDProcess: identifier=com.apple.WindowServer, pid=381, auid=88, euid=88, binary_path=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer is checking access for accessor TCCDProcess: identifier=Electron Helper (GPU), pid=25602, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/MedChart Pro Helper (GPU).app/Contents/MacOS/MedChart Pro Helper (GPU)
+default	22:19:52.024718-0400	MedChart Pro	{"msg":"CLClientDefaultMessageHandler", "event":"activity", "client":"0x13c008c1340"}
+default	22:19:52.038136-0400	MedChart Pro	{"msg":"CLClientMessageRegistrationtHandler", "event":"activity", "client":"0x13c008c1340"}
+default	22:19:52.038244-0400	MedChart Pro	{"msg":"Sending queued messages", "count":0}
+default	22:19:52.038536-0400	MedChart Pro	{"msg":"Sending cached messages to daemon", "event":"activity"}
+default	22:19:52.038844-0400	MedChart Pro	{"msg":"CLClientDefaultMessageHandler", "event":"activity", "client":"0x13c008c1340"}
+default	22:19:52.041558-0400	MedChart Pro	OSEligibilityState.current(): output: OSEligibilityState(answer: GenerativeModelsFoundation.OSEligibilityState.Answer.eligible(GenerativeModelsFoundation.OSEligibilityState.Answer.EligibleInfo()), source: computed)
+default	22:19:52.041670-0400	MedChart Pro	answer_source: computed
+default	22:19:52.042193-0400	MedChart Pro	isAvailable: featureEnabled = true, isMDMAllowed = true, gmAvailable (current) = true
+default	22:19:52.064435-0400	tccd	AUTHREQ_SUBJECT: msgID=381.308, subject=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro,
+default	22:19:52.066416-0400	tccd	-[TCCDAccessIdentity staticCode]: static code for: identifier /Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro, type: 1: 0xa2837e100 at /Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro
+default	22:19:52.077838-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"limitsPrecision", "old":0, "new":0}
+default	22:19:52.077850-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"previousAuthorizationStatus", "old":"NotDetermined", "new":"NotDetermined"}
+default	22:19:52.077858-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"previousAuthorizationStatusValid", "old":0, "new":1}
+default	22:19:52.077864-0400	MedChart Pro	{"msg":"state transition", "event":"state_transition", "state":"LocationManager", "id":"0x13c02cc5250", "property":"isAuthorizedForWidgetUpdates", "old":0, "new":0}
+default	22:19:52.077876-0400	MedChart Pro	{"msg":"#CLLocationManager invoking #delegate", "self":"0x13c02cc5250", "delegate":"0x13c02cc9a50", "selector":"locationManager:didChangeAuthorizationStatus:", "authorizationStatus":"NotDetermined", "limitsPrecision":0, "isAuthorizedForWidgetUpdates":0}
+default	22:19:52.077956-0400	MedChart Pro	{"msg":"CLLocationManager", "event":"activity", "_cmd":"onClientEventRegistration:", "self":"0x13c02cc5250", "clientKey":"D8C8E52B-FBA5-4E00-B29A-E90EB021D1C4:icom.medchart.pro:"}
+default	22:19:52.079509-0400	tccd	-[TCCDAccessIdentity staticCode]: static code for: identifier com.medchart.pro, type: 0: 0xa2837ea00 at /Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app
+default	22:19:52.086486-0400	MedChart Pro	void _NSDisableAutomaticTerminationAndLog(NSString *) Restoring windows
+default	22:19:52.097951-0400	MedChart Pro	[0x13c02ea0000] activating connection: mach=true listener=false peer=false name=com.apple.windowmanager.server
+default	22:19:52.098493-0400	WindowManager	Connection activated | (25600) MedChart Pro
+default	22:19:52.109209-0400	MedChart Pro	[0x13c0036af00] activating connection: mach=true listener=false peer=false name=com.apple.pbs.fetch_services
+default	22:19:52.109620-0400	MedChart Pro	[0x13c0036af00] invalidated after the last release of the connection object
+default	22:19:52.111283-0400	lsd	com.medchart.pro.helper.GPU/Unknown Persona:5:5:1:1:Building bundle record for app
+default	22:19:52.111566-0400	lsd	com.medchart.pro.helper.GPU/Unknown Persona:5:5:2:1:Built bundle record for app
+default	22:19:52.118535-0400	MedChart Pro	void _NSEnableAutomaticTerminationAndLog(NSString *) No windows open yet
+default	22:19:52.118900-0400	MedChart Pro	establishing connection to agent
+default	22:19:52.119019-0400	MedChart Pro	[0x13c02cdf300] Session created.
+default	22:19:52.119071-0400	MedChart Pro	[0x13c02cdf300] Session created from connection [0x13c00362000]
+default	22:19:52.119141-0400	MedChart Pro	[0x13c00362000] activating connection: mach=true listener=false peer=false name=com.apple.uiintelligencesupport.agent
+default	22:19:52.119288-0400	MedChart Pro	[0x13c02cdf300] Session activated
+default	22:19:52.126954-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/MedChart Pro Helper (Renderer).app/Contents/MacOS/MedChart Pro Helper (Renderer)' has no CMS blob?
+default	22:19:52.126962-0400	kernel	AMFI: '/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/Frameworks/MedChart Pro Helper (Renderer).app/Contents/MacOS/MedChart Pro Helper (Renderer)': Unrecoverable CT signature issue, bailing out.
+default	22:19:52.134951-0400	lsd	com.medchart.pro.helper.GPU/Unknown Persona:5:4:2:1:_LSServerRegisterItemInfo result = 0
+default	22:19:52.140367-0400	MedChart Pro	order window front conditionally: 534 related: 0
+default	22:19:52.140933-0400	MedChart Pro	[0x13c00190a00] activating connection: mach=true listener=false peer=false name=com.apple.coreservices.sharedfilelistd.xpc
+default	22:19:52.148232-0400	MedChart Pro	void _NSEnableAutomaticTerminationAndLog(NSString *) Restoring windows
+default	22:19:52.148545-0400	MedChart Pro	[0x13c0036ca00] activating connection: mach=true listener=false peer=false name=com.apple.window_proxies
+default	22:19:52.148694-0400	MedChart Pro	[0x13c0036ca00] invalidated because the current process cancelled the connection by calling xpc_connection_cancel()
+default	22:19:52.150495-0400	MedChart Pro	order all windows front 6629342682750
+default	22:19:52.151427-0400	MedChart Pro	[0x13c0036ca00] activating connection: mach=false listener=false peer=false name=com.apple.ViewBridgeAuxiliary
+default	22:19:52.156203-0400	MedChart Pro	[0x13c00196cc0] activating connection: mach=false listener=false peer=false name=(anonymous)
+default	22:19:52.156424-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [osservice<com.apple.WindowServer(88)>:381] with description <RBSAssertionDescriptor| "AppDrawing" ID:388-381-6652 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.appnap" name:"AppDrawing" sourceEnvironment:"(null)">,
+	<RBSAcquisitionCompletionAttribute| policy:AfterApplication>
+	]>
+default	22:19:52.156526-0400	runningboardd	Assertion 388-381-6652 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:52.156821-0400	MedChart Pro	[0x13c00196680] activating connection: mach=false listener=true peer=false name=(anonymous)
+default	22:19:52.156922-0400	MedChart Pro	[0x13c00196680] Channel could not return listener port.
+default	22:19:52.157349-0400	MedChart Pro	[0x13c0036ca00] invalidated after the last release of the connection object
+default	22:19:52.156871-0400	MedChart Pro	[0x124002e0c00] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.daemon
+default	22:19:52.157243-0400	MedChart Pro	[0x124002e0d00] activating connection: mach=true listener=false peer=false name=com.apple.cfprefsd.agent
+default	22:19:52.158575-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:52.158715-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:52.158962-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:52.159456-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:52.163888-0400	lsd	com.medchart.pro.helper.GPU/Unknown Persona:5:5:1:1:Building bundle record for app
+default	22:19:52.164160-0400	lsd	com.medchart.pro.helper.GPU/Unknown Persona:5:5:2:1:Built bundle record for app
+default	22:19:52.164288-0400	MedChart Pro	[0x124002e0e00] activating connection: mach=true listener=false peer=false name=com.apple.coreservices.launchservicesd
+default	22:19:52.164742-0400	MedChart Pro	[0x124002e1100] activating connection: mach=true listener=false peer=false name=com.apple.analyticsd
+default	22:19:52.165023-0400	MedChart Pro	[0x124002e1400] activating connection: mach=true listener=false peer=false name=com.apple.pasteboard.1
+default	22:19:52.165469-0400	MedChart Pro	[0x124002e1800] activating connection: mach=true listener=false peer=false name=com.apple.distributed_notifications@Uv3
+default	22:19:52.167552-0400	MedChart Pro	void _NSDisableAutomaticTerminationAndLog(NSString *) No windows open yet
+default	22:19:52.169831-0400	MedChart Pro	[0x124002e1d00] activating connection: mach=true listener=false peer=false name=com.apple.tccd.system
+default	22:19:52.170382-0400	tccd	AUTHREQ_ATTRIBUTION: msgID=25604.1, attribution={responsible={TCCDProcess: identifier=Electron, pid=25600, auid=501, euid=501, responsible_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro}, requesting={TCCDProcess: identifier=Electron, pid=25604, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro}, },
+default	22:19:52.178165-0400	lsd	com.medchart.pro.helper.GPU/Unknown Persona:5:4:2:1:_LSServerRegisterItemInfo result = 0
+default	22:19:52.188277-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [osservice<com.apple.WindowServer(88)>:381] with description <RBSAssertionDescriptor| "FUSBProcessWindowState: visible" ID:388-381-6653 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.fuseboard" name:"Visible" sourceEnvironment:"(null)">,
+	<RBSAcquisitionCompletionAttribute| policy:AfterApplication>
+	]>
+default	22:19:52.188467-0400	runningboardd	Assertion 388-381-6653 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:52.196645-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:52.196974-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:52.197170-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:52.197345-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:52.205631-0400	tccd	AUTHREQ_SUBJECT: msgID=25604.1, subject=com.medchart.pro,
+default	22:19:52.207813-0400	tccd	-[TCCDAccessIdentity staticCode]: static code for: identifier com.medchart.pro, type: 0: 0xa2837cf00 at /Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app
+default	22:19:52.209837-0400	MedChart Pro	[0x124002e1d00] invalidated after the last release of the connection object
+default	22:19:52.209975-0400	MedChart Pro	server port 0x00003107, session port 0x00003107
+default	22:19:52.195923-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractiveFocal) (endowments: <private>)
+default	22:19:52.211519-0400	tccd	AUTHREQ_ATTRIBUTION: msgID=381.309, attribution={responsible={TCCDProcess: identifier=Electron, pid=25600, auid=501, euid=501, responsible_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro}, accessing={TCCDProcess: identifier=Electron, pid=25604, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro}, requesting={TCCDProcess: identifier=com.apple.WindowServer, pid=381, auid=88, euid=88, binary_path=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer}, },
+default	22:19:52.211694-0400	tccd	requestor: TCCDProcess: identifier=com.apple.WindowServer, pid=381, auid=88, euid=88, binary_path=/System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/Resources/WindowServer is checking access for accessor TCCDProcess: identifier=Electron, pid=25604, auid=501, euid=501, binary_path=/Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app/Contents/MacOS/MedChart Pro
+default	22:19:52.216139-0400	tccd	AUTHREQ_SUBJECT: msgID=381.309, subject=com.medchart.pro,
+default	22:19:52.218592-0400	tccd	-[TCCDAccessIdentity staticCode]: static code for: identifier com.medchart.pro, type: 0: 0xa2837fc00 at /Users/ethanmarshall/Desktop/medchartpro/dist-electron/mac-arm64/MedChart Pro.app
+default	22:19:52.220313-0400	runningboardd	Calculated state for app<application.com.medchart.pro.45466877.45466882(501)>: running-active (role: UserInteractiveFocal) (endowments: <private>)
+default	22:19:52.221182-0400	MedChart Pro	New connection 0xb9913 main
+default	22:19:52.221394-0400	gamepolicyd	Received state update for 25600 (app<application.com.medchart.pro.45466877.45466882(501)>, running-active-NotVisible
+default	22:19:52.220674-0400	runningboardd	Acquiring assertion targeting [app<application.com.medchart.pro.45466877.45466882(501)>:25600] from originator [osservice<com.apple.WindowServer(88)>:381] with description <RBSAssertionDescriptor| "AppVisible" ID:388-381-6654 target:25600 attributes:[
+	<RBSDomainAttribute| domain:"com.apple.appnap" name:"AppVisible" sourceEnvironment:"(null)">,
+	<RBSAcquisitionCompletionAttribute| policy:AfterApplication>
+	]>
+default	22:19:52.221375-0400	runningboardd	Assertion 388-381-6654 (target:[app<application.com.medchart.pro.45466877.45466882(501)>:25600]) will be created as active
+default	22:19:52.222708-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring jetsam update because this process is not memory-managed
+default	22:19:52.222769-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring suspend because this process is not lifecycle managed
+default	22:19:52.222875-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring GPU update because this process is not GPU managed
+default	22:19:52.223109-0400	runningboardd	[app<application.com.medchart.pro.45466877.45466882(501)>:25600] Ignoring memory limit update because this process is not memory-managed
+default	22:19:52.225888-0400	MedChart Pro	CHECKIN: pid=25604
+default	22:19:52.231112-0400	MedChart Pro	CHECKEDIN: pid=25604 asn=0x0-0x1db1db foreground=1
+default	22:19:52.231375-0400	runningboardd	Resolved pid 25604 to [anon<MedChart Pro>(501):25604]
+default	22:19:52.230953-0400	launchservicesd	CHECKIN:0x0-0x1db1db 25604 com.medchart.pro
+default	22:19:52.232026-0400	runningboardd	[anon<MedChart Pro>(501):25604] is not RunningBoard jetsam managed.
+default	22:19:52.232125-0400	runningboardd	[anon<MedChart Pro>(501):25604] This process will not be managed.
+default	22:19:52.232215-0400	runningboardd	Now tracking process: [anon<MedChart Pro>(501):25604]
+default	22:19:52.237466-0400	loginwindow	-[PersistentAppsSupport applicationReady:] | App: MedChart Pro, ready, updating active tracking timer

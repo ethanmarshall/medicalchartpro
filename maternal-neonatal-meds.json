@@ -1,0 +1,664 @@
+[
+  {
+    "Medication": "Acetaminophen",
+    "Dosage": "650mg",
+    "Classification": "Non-opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Acetaminophen",
+    "Dosage": "1000mg",
+    "Route": "PO",
+    "Frequency": "q6h",
+    "PRN": "PRN",
+    "Classification": "Non-opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Acetaminophen",
+    "Dosage": "1000mg",
+    "Route": "IV",
+    "Frequency": "q6h",
+    "PRN": "PRN",
+    "Classification": "Non-opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Ibuprofen/Motrin",
+    "Dosage": "600mg",
+    "Route": "PO",
+    "Frequency": "q6h",
+    "PRN": "PRN",
+    "Classification": "NSAID",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Toradol",
+    "Dosage": "30mg",
+    "Route": "IVP",
+    "Frequency": "q6h",
+    "PRN": "PRN",
+    "Classification": "NSAID",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Oxycodone/Percocet",
+    "Dosage": "5mg",
+    "Route": "PO",
+    "Frequency": "q4-6h",
+    "PRN": "PRN",
+    "Classification": "Opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Oxycodone/Percocet",
+    "Dosage": "10mg",
+    "Route": "PO",
+    "Frequency": "q4-6h",
+    "PRN": "PRN",
+    "Classification": "Opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Morphine",
+    "Dosage": "2mg",
+    "Route": "IVP",
+    "Frequency": "q2-4h",
+    "PRN": "PRN",
+    "Classification": "Opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Morphine",
+    "Dosage": "4mg",
+    "Route": "IVP",
+    "Frequency": "q2-4h",
+    "PRN": "PRN",
+    "Classification": "Opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Fentanyl",
+    "Dosage": "50mcg",
+    "Route": "IVP",
+    "Frequency": "q2h",
+    "PRN": "PRN",
+    "Classification": "Opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Fentanyl",
+    "Dosage": "100mcg",
+    "Route": "IVP",
+    "Frequency": "q2h",
+    "PRN": "PRN",
+    "Classification": "Opioid Analgesic",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Nubain",
+    "Dosage": "10mg",
+    "Route": "IVP",
+    "Frequency": "q4h",
+    "PRN": "PRN",
+    "Classification": "Opioid Agonist-Antagonist",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Nubain",
+    "Dosage": "10mg",
+    "Route": "IM",
+    "Frequency": "q4h",
+    "PRN": "PRN",
+    "Classification": "Opioid Agonist-Antagonist",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Stadol",
+    "Dosage": "1mg",
+    "Route": "IVP",
+    "Frequency": "q4h",
+    "PRN": "PRN",
+    "Classification": "Opioid Agonist-Antagonist",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Stadol",
+    "Dosage": "2mg",
+    "Route": "IVP",
+    "Frequency": "q4h",
+    "PRN": "PRN",
+    "Classification": "Opioid Agonist-Antagonist",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Stadol",
+    "Dosage": "1mg",
+    "Route": "IM",
+    "Frequency": "q4h",
+    "PRN": "PRN",
+    "Classification": "Opioid Agonist-Antagonist",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Stadol",
+    "Dosage": "2mg",
+    "Route": "IM",
+    "Frequency": "q4h",
+    "PRN": "PRN",
+    "Classification": "Opioid Agonist-Antagonist",
+    "Category": "Pain",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Colace/Docusate sodium",
+    "Dosage": "100mg",
+    "Route": "PO",
+    "Frequency": "BID",
+    "Classification": "Stool Softener",
+    "Category": "GI/Bowel Regimen",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Dulcolax",
+    "Dosage": "10mg",
+    "Route": "PO",
+    "Frequency": "daily",
+    "PRN": "PRN",
+    "Classification": "Stimulant Laxative",
+    "Category": "GI/Bowel Regimen",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Senokot",
+    "Dosage": "8.6mg",
+    "Route": "PO",
+    "Frequency": "BID",
+    "PRN": "PRN",
+    "Classification": "Stimulant Laxative",
+    "Category": "GI/Bowel Regimen",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Mylicon",
+    "Dosage": "40mg",
+    "Route": "PO",
+    "Frequency": "q4h",
+    "PRN": "PRN",
+    "Classification": "Antiflatulent",
+    "Category": "GI/Bowel Regimen",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Pitocin",
+    "Dosage": "10 units/1000mL",
+    "Route": "IV infusion",
+    "Classification": "Uterotonic",
+    "Category": "OB Hemorrhage/Uterotonic",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Methergine",
+    "Dosage": "0.2mg",
+    "Route": "PO",
+    "Frequency": "q8h",
+    "Classification": "Uterotonic",
+    "Category": "OB Hemorrhage/Uterotonic",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Methergine",
+    "Dosage": "0.2mg",
+    "Route": "IM",
+    "Frequency": "q2-4h",
+    "PRN": "PRN",
+    "Classification": "Uterotonic",
+    "Category": "OB Hemorrhage/Uterotonic",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Hemabate",
+    "Dosage": "250mcg",
+    "Route": "IM",
+    "Frequency": "q15-90min",
+    "PRN": "PRN",
+    "Classification": "Uterotonic",
+    "Category": "OB Hemorrhage/Uterotonic",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Cytotec",
+    "Dosage": "400mcg",
+    "Route": "PO",
+    "Frequency": "q4h",
+    "Classification": "Uterotonic",
+    "Category": "Labor Induction/Cervical Ripening",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Cytotec",
+    "Dosage": "400mcg",
+    "Route": "PR",
+    "Frequency": "q4h",
+    "Classification": "Uterotonic",
+    "Category": "Labor Induction/Cervical Ripening",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Cervidil",
+    "Dosage": "10mg",
+    "Route": "Vaginal insert",
+    "Frequency": "q12h",
+    "Classification": "Prostaglandin (Ripening)",
+    "Category": "Labor Induction/Cervical Ripening",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Prepidil gel",
+    "Dosage": "0.5mg",
+    "Route": "Intracervical",
+    "Frequency": "q6h",
+    "Classification": "Prostaglandin (Ripening)",
+    "Category": "Labor Induction/Cervical Ripening",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Terbutaline",
+    "Dosage": "0.25mg",
+    "Route": "SC",
+    "Frequency": "q20min x3",
+    "Classification": "Tocolytic",
+    "Category": "Preterm Labor/Tachysystole",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Labetalol",
+    "Dosage": "20mg",
+    "Route": "IVP",
+    "Frequency": "initial",
+    "Classification": "Antihypertensive",
+    "Category": "Hypertension",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Labetalol",
+    "Dosage": "200mg",
+    "Route": "PO",
+    "Frequency": "twice dialy",
+    "Classification": "Antihypertensive",
+    "Category": "Hypertension",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Labetalol",
+    "Dosage": "40-80mg",
+    "Route": "IVP",
+    "Frequency": "q10min",
+    "Classification": "Antihypertensive",
+    "Category": "Hypertension",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Nifedipine",
+    "Dosage": "10mg",
+    "Route": "PO",
+    "Frequency": "q20min x3",
+    "Classification": "Antihypertensive",
+    "Category": "Hypertension",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Nifedipine",
+    "Dosage": "10mg",
+    "Route": "PO",
+    "Frequency": "q4-6h",
+    "Classification": "Antihypertensive",
+    "Category": "Hypertension",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Nifedipine",
+    "Dosage": "20mg",
+    "Route": "PO",
+    "Frequency": "q4-6h",
+    "Classification": "Antihypertensive",
+    "Category": "Hypertension",
+    "Maternal or Newborn": "Maternal",
+    "__EMPTY": "*can also be used to prevent preterm labor"
+  },
+  {
+    "Medication": "Aldomet",
+    "Dosage": "250mg",
+    "Route": "PO",
+    "Frequency": "q6h",
+    "Classification": "Antihypertensive",
+    "Category": "Hypertension",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Magnesium sulfate",
+    "Dosage": "4g",
+    "Route": "IV",
+    "Frequency": "Loading dose/Bolus dose",
+    "Classification": "Anticonvulsant/Neuroprotection",
+    "Category": "Anticonvulsant/Neuroprotection",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Magnesium sulfate",
+    "Dosage": "2g/hr",
+    "Route": "IV ",
+    "Classification": "Anticonvulsant/Neuroprotection",
+    "Category": "Anticonvulsant/Neuroprotection",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Ephedrine",
+    "Dosage": "5mg",
+    "Route": "IV",
+    "Frequency": "PRN",
+    "Classification": "Vasopressor",
+    "Category": "Hypotension",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Ephedrine",
+    "Dosage": "10mg",
+    "Route": "IV",
+    "Frequency": "PRN",
+    "Classification": "Vasopressor",
+    "Category": "Hypotension",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Tdap vaccine",
+    "Dosage": "0.5mL",
+    "Route": "IM",
+    "Frequency": "once",
+    "Classification": "Vaccine",
+    "Category": "Vaccines/Immunizations",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Flu vaccine",
+    "Dosage": "0.5mL",
+    "Route": "IM",
+    "Frequency": "annually",
+    "Classification": "Vaccine",
+    "Category": "Vaccines/Immunizations",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Rhogam",
+    "Dosage": "300mcg",
+    "Route": "IM",
+    "Classification": "Immunoglobulin",
+    "Category": "Vaccines/Immunizations",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Rubella vaccine",
+    "Dosage": "0.5mL",
+    "Route": "SC",
+    "Frequency": "postpartum",
+    "Classification": "Vaccine",
+    "Category": "Vaccines/Immunizations",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Energix/Hepatitis B vaccine",
+    "Dosage": "1mL",
+    "Route": "IM",
+    "Frequency": "x3",
+    "Classification": "Vaccine",
+    "Category": "Vaccines/Immunizations",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Hepatitis B vaccine newborn",
+    "Dosage": "0.5mL",
+    "Route": "IM",
+    "Classification": "Vaccine",
+    "Category": "Vaccines/Immunizations",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Medication": "Ferrous sulfate",
+    "Dosage": "325mg",
+    "Route": "PO",
+    "Frequency": "daily",
+    "Classification": "Supplement",
+    "Category": "Vitamin/Supplement",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Prenatal vitamin",
+    "Dosage": "1 tablet",
+    "Route": "PO",
+    "Frequency": "daily",
+    "Classification": "Supplement",
+    "Category": "Vitamin/Supplement",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Aqua-mephyton (Vitamin K)",
+    "Dosage": "1mg",
+    "Route": "IM",
+    "Frequency": "newborn",
+    "Classification": "Newborn Prophylaxis",
+    "Category": "Vitamin/Supplement",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Narcan",
+    "Dosage": "0.4mg",
+    "Route": "IVP",
+    "Frequency": "PRN",
+    "Classification": "Opioid Antagonist",
+    "Category": "Reversal Agent",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Calcium gluconate",
+    "Dosage": "1g",
+    "Route": "IV",
+    "Frequency": "over 10min",
+    "Classification": "Mg Antidote",
+    "Category": "Supplement/Antidote",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Betamethasone",
+    "Dosage": "12mg",
+    "Route": "IM",
+    "Frequency": "q24h x2",
+    "Classification": "Corticosteroid",
+    "Category": "Steroid/Antenatal/Fetal Lung Maturity",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Erythromycin ointment",
+    "Dosage": "Both eyes",
+    "Route": "Topical",
+    "Frequency": "once",
+    "Classification": "Newborn Prophylaxis",
+    "Category": "Antibiotic Ointment",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Medication": "Indocin",
+    "Dosage": "50mg",
+    "Route": "PO",
+    "Frequency": "q6h x8",
+    "Classification": "NSAID Tocolytic",
+    "Category": "NSAID/used for Tocolysis",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Methadone",
+    "Dosage": "Individualized",
+    "Classification": "Opioid Maintenance",
+    "Category": "Opioid Agonist/Antagonist for Substance Use",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Subutex/Buprenorphine",
+    "Dosage": "Individualized",
+    "Classification": "Opioid Maintenance",
+    "Category": "Opioid Agonist/Antagonist for Substance Use",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Suboxone",
+    "Dosage": "Individualized",
+    "Classification": "Opioid Maintenance",
+    "Category": "Opioid Agonist/Antagonist for Substance Use",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Tranexamic acid",
+    "Dosage": "1g",
+    "Route": "IV",
+    "Frequency": "over 10min",
+    "Classification": "Antifibrinolytic",
+    "Category": "Antifibrinolytic/Hemorrhage Adjunct",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Dermoplast spray",
+    "Route": "Topical",
+    "Frequency": "PRN",
+    "Classification": "Topical Anesthetic",
+    "Category": "Local/Topical Agents",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Lidocaine",
+    "Dosage": "1%",
+    "Route": "Solution",
+    "Frequency": "Local anesthesia",
+    "Classification": "Local Anesthetic",
+    "Category": "Local/Topical Agents",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Lidocaine",
+    "Dosage": "2%",
+    "Route": "Solution",
+    "Frequency": "Local anesthesia",
+    "Classification": "Local Anesthetic",
+    "Category": "Local/Topical Agents",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "EMLA cream",
+    "Dosage": "Topical",
+    "Frequency": "60min pre-procedure",
+    "Classification": "Topical Anesthetic",
+    "Category": "Local/Topical Agents",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Medication": "Glucose Gel (sweet cheeks)",
+    "Dosage": "Weight based:",
+    "Route": "Buccal",
+    "Frequency": "PRN low blood sugar",
+    "PRN": "PRN",
+    "Classification": "Glucose elevating Agent",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Dosage": "2-2.5kg give 1mL",
+    "Route": "Buccal",
+    "Frequency": "PRN low blood sugar",
+    "PRN": "PRN",
+    "Classification": "Glucose elevating Agent",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Dosage": "2.5-3kg give 1.25mL",
+    "Route": "Buccal",
+    "Frequency": "PRN low blood sugar",
+    "PRN": "PRN",
+    "Classification": "Glucose elevating Agent",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Dosage": "3-3.5kg give 1.5mL",
+    "Route": "Buccal",
+    "Frequency": "PRN low blood sugar",
+    "PRN": "PRN",
+    "Classification": "Glucose elevating Agent",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Dosage": "3.5-4kg give 1.75mL",
+    "Route": "Buccal",
+    "Frequency": "PRN low blood sugar",
+    "PRN": "PRN",
+    "Classification": "Glucose elevating Agent",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Dosage": "4-4.5kg give 2mL",
+    "Route": "Buccal",
+    "Frequency": "PRN low blood sugar",
+    "PRN": "PRN",
+    "Classification": "Glucose elevating Agent",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Dosage": "greater than 4.5kg give 2.25mL",
+    "Route": "Buccal",
+    "Frequency": "PRN low blood sugar",
+    "PRN": "PRN",
+    "Classification": "Glucose elevating Agent",
+    "Maternal or Newborn": "Newborn"
+  },
+  {
+    "Medication": "Penicillin",
+    "Dosage": "5 million units",
+    "Route": "IV",
+    "Frequency": "once",
+    "Category": "Prophylactic Antibiotic",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Dosage": "then 2.5-3million units",
+    "Route": "IV ",
+    "Frequency": "q4h",
+    "Category": "Prophylactic Antibiotic",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Medication": "Ampicillin",
+    "Dosage": "2gram loading dose",
+    "Route": "IV",
+    "Frequency": "once",
+    "Category": "Prophylactic Antibiotic",
+    "Maternal or Newborn": "Maternal"
+  },
+  {
+    "Dosage": "then 1 gram ",
+    "Route": "IV",
+    "Frequency": "q4h",
+    "Category": "Prophylactic Antibiotic",
+    "Maternal or Newborn": "Maternal"
+  }
+]

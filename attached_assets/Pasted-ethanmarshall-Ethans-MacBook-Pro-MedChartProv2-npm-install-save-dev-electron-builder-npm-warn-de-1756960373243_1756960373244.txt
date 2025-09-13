@@ -1,0 +1,50 @@
+ethanmarshall@Ethans-MacBook-Pro MedChartProv2 % npm install --save-dev electron builder
+npm warn deprecated boolean@3.2.0: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+npm warn deprecated osenv@0.1.5: This package is no longer supported.
+
+added 73 packages, and audited 671 packages in 16s
+
+91 packages are looking for funding
+  run `npm fund` for details
+
+10 vulnerabilities (1 low, 8 moderate, 1 high)
+
+To address issues that do not require attention, run:
+  npm audit fix
+
+To address all issues possible (including breaking changes), run:
+  npm audit fix --force
+
+Some issues need review, and may require choosing
+a different dependency.
+
+Run `npm audit` for details.
+ethanmarshall@Ethans-MacBook-Pro MedChartProv2 % npm run dist
+
+> rest-express@1.0.0 dist
+> npm run build && electron-builder
+
+
+> rest-express@1.0.0 build
+> vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+
+vite v5.4.19 building for production...
+transforming (3) src/main.tsxBrowserslist: browsers data (caniuse-lite) is 11 months old. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+✓ 3002 modules transformed.
+../dist/public/index.html                                       2.20 kB │ gzip:   0.86 kB
+../dist/public/assets/IMG_1772_1756955496751-C07JcabP.jpeg      4.81 kB
+../dist/public/assets/index-C1JENidU.css                      101.96 kB │ gzip:  16.63 kB
+../dist/public/assets/index-B6JGxmao.js                     1,161.45 kB │ gzip: 294.48 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 2.84s
+
+  dist/index.js  156.0kb
+
+⚡ Done in 10ms
+sh: electron-builder: command not found

@@ -1,0 +1,117 @@
+###Infant Patient Profiles
+
+Infant 1: Baby Boy Smith
+Parent: Olivia Smith
+
+MRN: 456789123-01
+
+Sex: Male
+
+Gestational Age at Birth: 39 weeks 4 days
+
+Date/Time of Birth: 08/27/2025 @ 10:52
+
+Delivery Type: Spontaneous Vaginal Delivery
+
+Birth Weight: 3.4 kg (7 lbs 8 oz)
+
+Length: 51 cm
+
+APGAR Scores: 8 (at 1 min), 9 (at 5 min)
+
+Initial Vitals: T: 37.0 C, HR: 145, RR: 50
+
+Provider Orders:
+
+Feeding: Breastfeeding on demand.
+
+Meds: Vitamin K 1mg IM, Erythromycin eye ointment.
+
+Screenings: Newborn screen, hearing screen, CCHD screen at 24 hours of age.
+
+Infant 2: Baby Girl Garcia
+Parent: Maria Garcia
+
+MRN: 789123456-01
+
+Sex: Female
+
+Gestational Age at Birth: 41 weeks 1 day
+
+Date/Time of Birth: 08/27/2025 @ 11:01
+
+Delivery Type: Pitocin-augmented Vaginal Delivery
+
+Birth Weight: 4.0 kg (8 lbs 13 oz)
+
+Length: 53 cm
+
+APGAR Scores: 9 (at 1 min), 9 (at 5 min)
+
+Initial Vitals: T: 36.8 C, HR: 150, RR: 48. Note: Mild peeling skin, common for post-term infants.
+
+Provider Orders:
+
+Feeding: Formula feeding, 1-2 oz every 3-4 hours.
+
+Meds: Vitamin K 1mg IM, Erythromycin eye ointment.
+
+Labs: Blood glucose check before first three feeds due to large size.
+
+Infant 3: Baby A Chen (Twin 1)
+Parent: Emily Chen
+
+MRN: 123456789-01
+
+Sex: Female
+
+Gestational Age at Birth: 37 weeks 5 days
+
+Date/Time of Birth: 08/27/2025 @ 09:42
+
+Delivery Type: Scheduled Cesarean Section
+
+Birth Weight: 2.6 kg (5 lbs 12 oz)
+
+Length: 47 cm
+
+APGAR Scores: 7 (at 1 min), 9 (at 5 min)
+
+Initial Vitals: T: 36.6 C, HR: 155, RR: 58
+
+Provider Orders:
+
+Transfer to NICU for transitional care and glucose monitoring (per twin protocol).
+
+Feeding: Mother's expressed colostrum via syringe, then breast/bottle as tolerated.
+
+Meds: Vitamin K 1mg IM, Erythromycin eye ointment.
+
+Infant 4: Baby B Chen (Twin 2)
+Parent: Emily Chen
+
+MRN: 123456789-02
+
+Sex: Male
+
+Gestational Age at Birth: 37 weeks 5 days
+
+Date/Time of Birth: 08/27/2025 @ 09:44
+
+Delivery Type: Scheduled Cesarean Section
+
+Birth Weight: 2.8 kg (6 lbs 3 oz)
+
+Length: 48 cm
+
+APGAR Scores: 8 (at 1 min), 9 (at 5 min)
+
+Initial Vitals: T: 36.7 C, HR: 148, RR: 54
+
+Provider Orders:
+
+Transfer to NICU for transitional care and glucose monitoring (per twin protocol).
+
+Feeding: Mother's expressed colostrum via syringe, then breast/bottle as tolerated.
+
+Meds: Vitamin K 1mg IM, Erythromycin eye ointment.

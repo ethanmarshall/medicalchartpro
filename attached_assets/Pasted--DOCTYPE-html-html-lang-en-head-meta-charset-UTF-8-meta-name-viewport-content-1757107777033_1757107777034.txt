@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adult Vital Signs Simulator</title>
+    
+    <!-- React Libraries -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <!-- Babel to compile JSX in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <style>
+        /* --- General Body and Font Styles --- */
+        body { 
+            margin: 0; 
+            font-family: sans-serif; 
+            background-color: #f8fafc;
+            color: #1f2937;
+        }
+
+        /* --- Main App Container --- */
+        .simulator-container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        /* --- Header --- */
+        .simulator-header {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0.75rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.875rem;
+            box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+        }
+        .header-patient-info span {
+            font-weight: 700;
+        }
+        .header-patient-info span.id-label {
+            margin-left: 1rem;
+        }
+        .header-time {
+            font-family: monospace;
+            color: #4b5563;
+        }
+
+        /* --- Grid Layout --- */
+        .monitor-grid { 
+            display: grid; 
+            grid-template-columns: repeat(12, 1fr); 
+            grid-template-rows: repeat(6, 1fr); 
+            gap: 1rem; 
+            height: calc(100vh - 5rem); 
+            padding: 1rem; 
+            flex-grow: 1;
+        }
+
+        /* --- Panel Styles --- */
+        .monitor-panel { 
+            background-color: #ffffff; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 0.75rem; 
+            padding: 1rem; 
+            display: flex; 
+            flex-direction: column; 
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); 
+        }
+        .panel-ecg { grid-column: span 6; grid-row: span 3; } 
+        .panel-spo2 { grid-column: span 6; grid-row: span 3; } 
+        .panel-resp { grid-column: span 6; grid-row: span 3; } 
+        .panel-nibp { grid-column: span 3; grid-row: span 3; } 
+        .panel-temp { grid-column: span 3; grid-row: span 3; }
+
+        /* --- Panel Headers --- */
+        .panel-header {
+            display: flex;
+            align-items: baseline;
+            width: 100%;
+        }
+        .panel-header > div { flex: 1; }
+        .panel-header > div:nth-child(1) { text-align: left; }
+        .panel-header > div:nth-child(2) { text-align: center; }
+        .panel-header > div:nth-child(3) { text-align: right; }
+
+        .panel-title { font-size: 1.5rem; font-weight: 700; }
+        .panel-value-number { font-size: 3.75rem; font-weight: 700; }
+        .panel-value-unit { font-size: 1.5rem; font-weight: 700; margin-left: 0.25rem; }
+
+        /* --- Header Colors --- */
+        .text-green { color: #16a34a; }
+        .text-cyan { color: #0891b2; }
+        .text-amber { color: #ca8a04; }
+        .text-gray { color: #374151; }
+        .text-orange { color: #ea580c; }
+        
+        /* --- Centered Panels (NIBP & Temp) --- */
+        .panel-centered {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .panel-centered .panel-value-main { margin: 1rem 0; }
+        .panel-centered .panel-subtitle { font-size: 0.75rem; color: #6b7280; font-weight: 700; }
+        .panel-centered .value-number { font-size: 4.5rem; }
+        .panel-centered .value-unit { font-size: 1.125rem; }
+        .last-reading { font-size: 0.875rem; color: #6b7280; }
+
+
+        /* --- Canvas Styles --- */
+        .canvas-container { flex-grow: 1; width: 100%; height: 100%; min-height: 0; }
+        canvas { width: 100%; height: 105%; background-size: 20px 20px; border-radius: 0.5rem; margin-top: auto; }
+        .ecg-canvas-bg { background-image: linear-gradient(rgba(22, 163, 74, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(22, 163, 74, 0.1) 1px, transparent 1px); }
+        .spo2-canvas-bg { background-image: linear-gradient(rgba(8, 145, 178, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(8, 145, 178, 0.1) 1px, transparent 1px); }
+        .resp-canvas-bg { background-image: linear-gradient(rgba(217, 119, 6, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(217, 119, 6, 0.1) 1px, transparent 1px); }
+        
+        /* --- Alert Animation --- */
+        @keyframes pulse-border { 0% { border-color: #ef4444; box-shadow: 0 0 10px #ef4444; } 50% { border-color: #b91c1c; box-shadow: 0 0 20px #b91c1c; } 100% { border-color: #ef4444; box-shadow: 0 0 10px #ef4444; } }
+        .alert-active { animation: pulse-border 1s infinite; }
+
+        /* --- Responsive Styles --- */
+        @media (max-width: 1024px) { 
+            .monitor-grid { grid-template-columns: repeat(1, 1fr); grid-template-rows: auto; height: auto; } 
+            .monitor-panel { grid-column: span 1 !important; grid-row: span 1 !important; min-height: 250px; } 
+            body { overflow: auto; } 
+        }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // This is the main React component for the entire simulator.
+        const VitalSignsSimulator = () => {
+            // React Hooks: useState is for state that causes re-renders, useRef is for mutable values that don't.
+            const { useState, useEffect, useRef } = React;
+
+            // --- STATE MANAGEMENT ---
+
+            // A ref for each canvas element to allow direct manipulation for drawing.
+            const canvasRefs = {
+                ecg: useRef(null),
+                spo2: useRef(null),
+                resp: useRef(null),
+            };
+
+            // This state holds the vital signs data. When this is updated, the numbers on the screen will change.
+            const [vitals, setVitals] = useState({
+                hr: 80,
+                spo2: 98,
+                resp: 16,
+                nibp: "120/80",
+                temp: 98.6,
+            });
+            
+            // A ref to hold the *latest* vitals. This is crucial to prevent "stale" data inside intervals and animation loops.
+            const vitalsRef = useRef(vitals);
+            useEffect(() => {
+                vitalsRef.current = vitals;
+            }, [vitals]);
+
+            // State for the clock display.
+            const [currentTime, setCurrentTime] = useState(new Date().toLocaleTimeString());
+            // State for the NIBP "last read" time.
+            const [nibpTime, setNibpTime] = useState('--:--');
+
+            // This ref holds all the internal simulation variables that change frequently but shouldn't cause a re-render.
+            const simState = useRef({
+                time: 0, // Master clock for the ECG waveform
+                spo2Phase: 0, // Dedicated "phase clock" for the SpO2 wave to prevent jitter
+                respPhase: 0, // Dedicated "phase clock" for the RESP wave to prevent jitter
+                lastLogMinute: -1, // Tracks the last minute we logged data to prevent duplicate logs
+                dataPoints: {}, // Holds the arrays of data points for each waveform canvas
+                animationFrameId: null, // ID for the animation loop so we can cancel it on cleanup
+                // Base configuration for vital signs simulation. The `range` creates random fluctuations.
+                stateConfig: {
+                    hr: { base: 80, range: 5 }, 
+                    spo2: { base: 98, range: 1 },
+                    resp: { base: 16, range: 2 },
+                    nibp: { sys: 120, dia: 80 },
+                    temp: { base: 37.0, range: 0.1 } 
+                }
+            }).current;
+
+            // --- MAIN EFFECT HOOK ---
+            // This runs once when the component is first mounted. It's used for setup and cleanup.
+            useEffect(() => {
+                // Get the 2D drawing context for each canvas.
+                const contexts = {
+                    ecg: canvasRefs.ecg.current?.getContext('2d'),
+                    spo2: canvasRefs.spo2.current?.getContext('2d'),
+                    resp: canvasRefs.resp.current?.getContext('2d'),
+                };
+                // Define colors for each waveform.
+                const colors = { ecg: '#16a34a', spo2: '#0891b2', resp: '#d97706' };
+                const TAU = Math.PI * 2; // A constant for 2 * PI, used in phase calculations.
+
+                // This function sets up the canvases, handling high-resolution (retina) displays.
+                const setupCanvases = () => {
+                     Object.keys(canvasRefs).forEach(key => {
+                        const canvas = canvasRefs[key].current;
+                        if (!canvas) return;
+                        const dpr = window.devicePixelRatio || 1;
+                        canvas.width = canvas.offsetWidth * dpr;
+                        canvas.height = canvas.offsetHeight * dpr;
+                        const ctx = contexts[key];
+                        if (ctx) {
+                            ctx.scale(dpr, dpr);
+                            // Initialize the data points array for the canvas width.
+                            simState.dataPoints[key] = new Array(Math.floor(canvas.offsetWidth)).fill(canvas.offsetHeight / 2);
+                        }
+                    });
+                };
+
+                // --- WAVEFORM GENERATION FUNCTIONS ---
+
+                // Generates a single data point for the ECG waveform.
+                const getEcgPoint = () => {
+                    const currentHr = vitalsRef.current.hr;
+                    const period = 60 / currentHr; // Duration of one heartbeat in seconds
+                    const x = (simState.time % period) / period; // Current position in the heartbeat cycle (0.0 to 1.0)
+                    let y = 0;
+
+                    // Define the duration and start time of each part of the ECG wave.
+                    const qrs_dur_seconds = 0.172; 
+                    const qrs_dur = qrs_dur_seconds / period; 
+
+                    const p_start = 0.1, p_dur = 0.1;
+                    const qrs_start = 0.25;
+                    const t_start = qrs_start + qrs_dur + 0.08; 
+                    const t_dur = 0.2;
+
+                    // Mathematical model for each part of the wave.
+                    if (x >= p_start && x < p_start + p_dur) { // P-wave
+                        y = 0.3 * Math.sin((x - p_start) * Math.PI / p_dur);
+                    } else if (x >= qrs_start && x < qrs_start + qrs_dur) { // QRS Complex
+                        const qrs_x = x - qrs_start;
+                        const q_point = qrs_dur * 0.2;
+                        const r_peak = qrs_dur * 0.5;
+                        const s_point = qrs_dur * 0.8;
+
+                        if (qrs_x < q_point) { y = -2.0 * (qrs_x / q_point); } 
+                        else if (qrs_x < r_peak) { y = -2.0 + (10.0 * (qrs_x - q_point) / (r_peak - q_point)); } 
+                        else if (qrs_x < s_point) { y = 8.0 - (11.0 * (qrs_x - r_peak) / (s_point - r_peak));} 
+                        else { y = -3.0 + (3.0 * (qrs_x - s_point) / (qrs_dur - s_point)); }
+                    } else if (x >= t_start && x < t_start + t_dur) { // T-wave
+                        y = 0.6 * Math.sin((x - t_start) * Math.PI / t_dur);
+                    }
+                    
+                    const canvasHeight = canvasRefs.ecg.current.offsetHeight;
+                    return canvasHeight / 2 - y * (canvasHeight / 15); // Scale and position on canvas
+                };
+
+                // Generates a single data point for the SpO2 plethysmograph waveform.
+                const getSpo2Point = () => {
+                    // This is the custom, detailed waveform function.
+                    function spo2Wave(phase, canvasHeight) {
+                        const params = {
+                           yMin: 0.20, p1: 0.90, notch: 0.61, p2: 0.69,
+                           t1: 0.19, t2: 0.305, t3: 0.36, a1: 0.48, a2: 0.65,
+                           bumpGamma: 1.25, tailShape: 1.6,
+                           amplitude: canvasHeight / 2.5, 
+                           baseline: canvasHeight / 2     
+                        };
+
+                        const smootherstep = (u) => u*u*u*(u*(u*6 - 15) + 10);
+                        const warp = (u, a=1) => smootherstep(Math.max(0, Math.min(1, u)) ** a);
+                        const easeCos = (u, g=1.25) => 0.5 - 0.5 * Math.cos(Math.PI * (Math.max(0, Math.min(1, u)) ** g));
+                        
+                        const x = phase / TAU; // Convert phase (0-2PI) back to a 0.0-1.0 cycle position
+
+                        const _t2 = Math.max(params.t2, params.t1 + 1e-3);
+                        const _t3 = Math.min(Math.max(params.t3, _t2 + 1e-3), 0.95);
+
+                        let y;
+                        if (x < params.t1) {
+                            const u = x / params.t1;
+                            y = params.yMin + (params.p1 - params.yMin) * warp(u, params.a1);
+                        } else if (x < _t2) {
+                            const u = (x - params.t1) / (_t2 - params.t1);
+                            y = params.notch + (params.p1 - params.notch) * (1 - warp(u, params.a2));
+                        } else if (x < _t3) {
+                            const u = (x - _t2) / (_t3 - _t2);
+                            y = params.notch + (params.p2 - params.notch) * easeCos(u, params.bumpGamma);
+                        } else {
+                            const u = (x - _t3) / (1 - _t3);
+                            const s = warp(u, params.tailShape);
+                            y = params.yMin + (params.p2 - params.yMin) * (1 - s);
+                        }
+                        // Scale the wave so its lowest point is at the baseline, ensuring it stays positive.
+                        return params.baseline - params.amplitude * (y - params.yMin); 
+                    }
+
+                    const canvasHeight = canvasRefs.spo2.current.offsetHeight;
+                    return spo2Wave(simState.spo2Phase, canvasHeight);
+                };
+
+                // Generates a single data point for the respiratory waveform.
+                const getRespPoint = () => {
+                    const canvasHeight = canvasRefs.resp.current.offsetHeight;
+                    
+                    // Creates a smooth, asymmetric wave.
+                    function smoothAsymmetricSine(phase) {
+                        const primaryWave = Math.sin(phase);
+                        const secondaryWave = 0.3 * Math.sin(phase * 2);
+                        return (primaryWave + secondaryWave) / 1.12;
+                    }
+                    
+                    const phase = simState.respPhase;
+                    const amp = canvasHeight / 5.0; 
+                    const baseline = canvasHeight / 2; 
+                    
+                    return baseline - amp * smoothAsymmetricSine(phase);
+                };
+                
+                // An object to easily call the correct generator function for each waveform.
+                const dataPointGenerators = { ecg: getEcgPoint, spo2: getSpo2Point, resp: getRespPoint };
+
+                // --- ANIMATION & DATA HANDLING ---
+
+                // This function draws a waveform on a canvas by connecting the dots in its dataPoints array.
+                const drawWaveform = (key) => {
+                    const ctx = contexts[key];
+                    const canvas = canvasRefs[key].current;
+                    if (!ctx || !canvas) return;
+                    const width = canvas.offsetWidth;
+                    ctx.clearRect(0, 0, width, canvas.offsetHeight); // Erase the canvas
+                    ctx.beginPath();
+                    ctx.lineWidth = 2.5;
+                    ctx.strokeStyle = colors[key];
+                    ctx.moveTo(0, simState.dataPoints[key][0]); // Move to the first point
+                    for (let i = 1; i < width; i++) {
+                        ctx.lineTo(i, simState.dataPoints[key][i]); // Draw lines to subsequent points
+                    }
+                    ctx.stroke(); // Make the line visible
+                };
+
+                // The main animation loop, run by requestAnimationFrame for smoothness.
+                const animate = () => {
+                    const frameTime = 0.016; // Approximately 60 frames per second
+                    simState.time += frameTime; // Increment the master clock
+                    
+                    // Increment the dedicated phase clocks for SpO2 and RESP, wrapping at 2*PI.
+                    const hrBpm = vitalsRef.current.hr;
+                    const hrPeriod = 60 / hrBpm;
+                    const spo2PhaseIncrement = (TAU / hrPeriod) * frameTime;
+                    simState.spo2Phase = (simState.spo2Phase + spo2PhaseIncrement) % TAU;
+
+                    const respBpm = vitalsRef.current.resp;
+                    const respPeriod = 60 / respBpm;
+                    const respPhaseIncrement = (TAU / respPeriod) * frameTime;
+                    simState.respPhase = (simState.respPhase + respPhaseIncrement) % TAU; 
+
+                    // For each waveform, generate a new point, add it to the end, remove the oldest, and redraw.
+                    Object.keys(canvasRefs).forEach(key => {
+                        if(simState.dataPoints[key]) {
+                            simState.dataPoints[key].push(dataPointGenerators[key]());
+                            simState.dataPoints[key].shift();
+                            drawWaveform(key);
+                        }
+                    });
+                    simState.animationFrameId = requestAnimationFrame(animate);
+                };
+                
+                // This function simulates saving data to a database by logging it to the console.
+                const saveVitalsToDatabase = (data) => {
+                    console.log("SIMULATING 15-MINUTE SAVE TO SQLITE DATABASE:");
+                    console.table(data);
+                };
+                
+                // Checks the current time and triggers a data log every 15 minutes.
+                const checkAndLogVitals = (currentVitals) => {
+                    const now = new Date();
+                    const currentMinutes = now.getMinutes();
+                    const isLogTime = currentMinutes === 0 || currentMinutes === 15 || currentMinutes === 30 || currentMinutes === 45;
+
+                    if (isLogTime && currentMinutes !== simState.lastLogMinute) {
+                        simState.lastLogMinute = currentMinutes;
+                        const vitalsData = {
+                            timestamp: now.toISOString(),
+                            hr: Math.round(currentVitals.hr),
+                            spo2: Math.round(currentVitals.spo2),
+                            nibp: currentVitals.nibp,
+                            resp: Math.round(currentVitals.resp),
+                            temp: parseFloat(currentVitals.temp.toFixed(1))
+                        };
+                        saveVitalsToDatabase(vitalsData);
+                    }
+                };
+
+                // This function is called on an interval to update the numerical vital signs.
+                const updateVitals = () => {
+                    const newVitals = { ...vitalsRef.current };
+                    Object.keys(simState.stateConfig).forEach(key => {
+                        const param = simState.stateConfig[key];
+                        if (key === 'nibp') return;
+                        if (typeof param.base !== 'undefined') {
+                            if (key === 'temp') {
+                                const tempCelsius = param.base + (Math.random() - 0.5) * param.range;
+                                newVitals[key] = (tempCelsius * 9/5) + 32;
+                            } else {
+                                newVitals[key] = param.base + (Math.random() - 0.5) * param.range;
+                            }
+                        }
+                    });
+                    setVitals(newVitals);
+                    checkAndLogVitals(newVitals);
+                };
+                
+                // Updates the NIBP value on its own, longer timer.
+                const updateNIBP = () => {
+                    const { sys, dia } = simState.stateConfig.nibp;
+                    const sysFluctuation = Math.round((Math.random() - 0.5) * 5);
+                    const diaFluctuation = Math.round((Math.random() - 0.5) * 5);
+                    const newNIBP = `${sys + sysFluctuation}/${dia + diaFluctuation}`;
+                    setVitals(prev => ({...prev, nibp: newNIBP}));
+                    setNibpTime(new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }));
+                };
+                
+                // --- INITIALIZATION & CLEANUP ---
+                setupCanvases(); // Set up the canvases on first render
+                animate(); // Start the animation loop
+                updateNIBP(); // Take an initial NIBP reading
+
+                // Set up the timers for updating vitals and the clock.
+                const vitalsInterval = setInterval(updateVitals, 2000);
+                const timeInterval = setInterval(() => setCurrentTime(new Date().toLocaleTimeString()), 1000);
+                const nibpInterval = setInterval(updateNIBP, 5 * 60 * 1000);
+                // Add an event listener to resize the canvases if the window is resized.
+                window.addEventListener('resize', setupCanvases);
+
+                // This is the cleanup function. It runs when the component is unmounted to prevent memory leaks.
+                return () => {
+                    clearInterval(vitalsInterval);
+                    clearInterval(timeInterval);
+                    clearInterval(nibpInterval);
+                    cancelAnimationFrame(simState.animationFrameId);
+                    window.removeEventListener('resize', setupCanvases);
+                };
+            }, []); // The empty array [] means this useEffect runs only once.
+
+            // A helper function to add the "alert-active" class if a vital is out of range.
+            const getPanelAlertClass = (vital, high, low) => {
+                const value = vitals[vital];
+                return (value > high || value < low) ? 'alert-active' : '';
+            };
+
+            // --- JSX RENDER ---
+            // This is the HTML structure of the component.
+            return (
+                <div className="simulator-container">
+                    <header className="simulator-header">
+                        <div className="header-patient-info">
+                            <span>PATIENT:</span> SIMULATOR, VITAL 
+                            <span className="id-label">ID:</span> VS-2024
+                        </div>
+                        <div className="header-time">{currentTime}</div>
+                    </header>
+                    <main className="monitor-grid">
+                        {/* ECG Panel */}
+                        <div className={`monitor-panel panel-ecg ${getPanelAlertClass('hr', 120, 50)}`}>
+                            <div className="panel-header text-green">
+                                <div><h3 className="panel-title">ECG II</h3></div>
+                                <div><h3 className="panel-title">Heart Rate</h3></div>
+                                <div>
+                                    <h3 className="panel-title">
+                                        <span className="panel-value-number">{Math.round(vitals.hr)}</span>
+                                        <span className="panel-value-unit">bpm</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div className="canvas-container"><canvas className="ecg-canvas-bg" ref={canvasRefs.ecg}></canvas></div>
+                        </div>
+                        {/* SpO2 Panel */}
+                        <div className={`monitor-panel panel-spo2 ${getPanelAlertClass('spo2', 101, 92)}`}>
+                            <div className="panel-header text-cyan">
+                                <div><h3 className="panel-title">SpO₂</h3></div>
+                                <div><h3 className="panel-title">Oxygen Sat.</h3></div>
+                                <div>
+                                    <h3 className="panel-title">
+                                        <span className="panel-value-number">{Math.round(vitals.spo2)}</span>
+                                        <span className="panel-value-unit">%</span>
+                                    </h3>
+                                </div>
+                            </div>
+                             <div className="canvas-container"><canvas className="spo2-canvas-bg" ref={canvasRefs.spo2}></canvas></div>
+                        </div>
+                        {/* Respiration Panel */}
+                        <div className="monitor-panel panel-resp">
+                             <div className="panel-header text-amber">
+                                <div><h3 className="panel-title">RESP</h3></div>
+                                <div><h3 className="panel-title">Resp. Rate</h3></div>
+                                <div>
+                                    <h3 className="panel-title">
+                                        <span className="panel-value-number">{Math.round(vitals.resp)}</span>
+                                        <span className="panel-value-unit">/min</span>
+                                    </h3>
+                                </div>
+                            </div>
+                            <div className="canvas-container"><canvas className="resp-canvas-bg" ref={canvasRefs.resp}></canvas></div>
+                        </div>
+                        {/* NIBP Panel */}
+                        <div className={`monitor-panel panel-nibp panel-centered`}>
+                            <div className="text-gray">
+                                <h3 className="panel-title">NIBP</h3>
+                                <h3 className="panel-subtitle">Non-Invasive Blood Pressure</h3>
+                                <div className="panel-value-main">
+                                    <span className="value-number">{vitals.nibp}</span>
+                                    <span className="value-unit">mmHg</span>
+                                </div>
+                                <div className="last-reading"><span>Last reading: </span><span>{nibpTime}</span></div>
+                            </div>
+                        </div>
+                        {/* Temperature Panel */}
+                        <div className={`monitor-panel panel-temp panel-centered`}>
+                             <div className="text-orange">
+                                <h3 className="panel-title">TEMP</h3>
+                                <h3 className="panel-subtitle">Body Temperature</h3>
+                                <div className="panel-value-main">
+                                    <span className="value-number">{vitals.temp.toFixed(1)}</span>
+                                    <span className="value-unit">°F</span>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            );
+        };
+
+        // Renders the React component into the <div id="root"></div> element.
+        ReactDOM.render(<VitalSignsSimulator />, document.getElementById('root'));
+    </script>
+</body>
+</html>
